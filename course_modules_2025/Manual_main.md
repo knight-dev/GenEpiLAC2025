@@ -10,7 +10,7 @@
 - [Module 3: Comparative Genomics (lecture only)](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Comparative_genomics_module/Comparative_genomics.md)
 - [Module 4: Mapping and Phylogenetics](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Mapping_and_Phylogenetics/Mapping+Phylo.md)
 - Module 5: Genome Assembly and Annotation
-  - [Part 1: Assembly Methods Comparison](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Assembly_method_comparison/Assembly_method_comparison.md)
+  - [Part 1: Assembly Methods Comparison](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Assembly_method_comparison/Assembly_method_comparison.md)
   - [Part 2: Genome Annotation](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Genome_Assembly_Annotation/Genome_Assembly_Annotation.md)
 - Introduction to epidemiology and genomic collaborative surveillance 
 - [Module 6: Web tools for genomic epidemiology](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Web_tools_for_genomic_epidemiology/manual.md)
