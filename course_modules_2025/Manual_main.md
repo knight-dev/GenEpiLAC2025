@@ -5,7 +5,7 @@
 
 - Genomic Capacity Development for Public Health Settings 
 - World Café: Translating Genomics into Public Health Action
-- [Module 1: Sequencing & QC](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Sequencing&QC/Sequencing&QC.md), 
+- [Module 1: Sequencing & QC](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Sequencing&QC/Sequencing&QC.md) 
 - [Module 2: Genome Visualisation Tools](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Genome_visualisation_tools/Genome_visualisation_tools.md)
 - [Module 3: Comparative Genomics (lecture only)](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Comparative_genomics_module/Comparative_genomics.md)
 - [Module 4: Mapping and Phylogenetics](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Mapping_and_Phylogenetics/Mapping+Phylo.md)
