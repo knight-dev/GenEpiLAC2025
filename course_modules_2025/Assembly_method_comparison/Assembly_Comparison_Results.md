@@ -1,15 +1,15 @@
 <img src="https://coursesandconferences.wellcomeconnectingscience.org/wp-content/themes/wcc_courses_and_conferences/dist/assets/svg/logo.svg" width="200" height="200">
 
 
-[<<< Go back to Manual Contents Page](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Manual_main.md)
+[<<< Go back to Manual Contents Page](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Assembly_method_comparison/Assembly_method_comparison.md)
 
 <br>
 
-[<<< Go back to Assembly Comparison  Exercise Page](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Assembly_method_comparison/Assembly_method_comparison.md)
+[<<< Go back to Assembly Comparison  Exercise Page](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Assembly_method_comparison/Assembly_method_comparison.md)
 
 <br>
 
-# Assembly Method Comparisons - Costa Rica 2024 <!-- omit in toc -->
+# Assembly Method Comparisons - Costa Rica 2025 <!-- omit in toc -->
 
 ## Class Results
 
