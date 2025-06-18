@@ -180,7 +180,7 @@ In the command below we:
 <br>
 
 ```bash
-conda activate ariba
+conda activate ariba-env
 ```
 
 <br>
