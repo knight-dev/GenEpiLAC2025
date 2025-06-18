@@ -4,7 +4,7 @@
 
 <br>
 
-# Module 1 - Sequencing & QC - Costa Rica 2024 <!-- omit in toc -->
+# Module 1 - Sequencing & QC - Costa Rica 2025 <!-- omit in toc -->
 
 ## Table of contents <!-- omit in toc -->
 - [Introduction](#introduction)
