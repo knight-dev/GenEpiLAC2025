@@ -651,6 +651,19 @@ Click `continue` to view the tree
 ## Accounting for recombination with `gubbins`
 We can use `gubbins` to infer recombining sites by looking for increased SNP density that occurs in specific ancestral nodes
 
+`gubbins` has been installed using `conda`. We must activate the relavent conda environment before running any commands using `gubbins`.
+
+<br>
+
+```bash
+conda activate gubbins-env
+```
+
+<br>
+
+Now we can run `gubbins`
+
+
 ```
 run_gubbins.py -h
 ```
