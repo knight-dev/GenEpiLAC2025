@@ -18,7 +18,7 @@
   - [QC of short data](#QC-of-short-data)
   - [QC of long data](#QC-of-long-data)
   - [Bonus](#bonus)
-  - [Short quiz on Linux](#short-quiz-on-Linux)
+  - [Wrap up questions](#Wrap-up-questions)
 
 ## Module Overview and Aims
 
@@ -289,78 +289,44 @@ First, for the sake of simplicity, let’s compress again the two fastq files be
 gzip CNGB1553_*.fastq
 ```
 
-Going back to FastqQC, we can launch the graphical interface by simply executing ``fastqc`` on the Terminal command line. However, it is often more convenient to use the software in the command-line mode. Execute the following command in the Terminal:
+Going back to FastQC, we can launch the graphical interface by simply executing ``fastqc`` on the Terminal command line. However, it is often more convenient to use the software in the command-line mode. Execute the following commands in the Terminal:
 
-    fastqc *.fastq.gz
+    mkdir fastqc_raw
+    fastqc -o fastqc_raw *.fastq.gz
 
-> With this command we will be running fastqc in all the files that have the `.fastq.gz` extension. Nonetheless we will be focusing only in samples ARIMSS995-11 and untrimmed.
+> With this command we will be running FastQC in all the files that have the `.fastq.gz` extension and the output files will appear in the folder "fastqc_raw".
 
 > **Note**: instead of compressing the files again with gzip, you could also use the command `fastqc *.fastq*`. By adding a star symbol after `.fastq`, fastqc will run in all files that include `.fastq` as part of the extension (zipped and unzipped)
          
-
-You will see some messages like this on your screen:
-
-    Started analysis of ARIMSS995-11_1.fastq.gz
-    Approx 5% complete for ARIMSS995-11_1.fastq.gz
-    Approx 10% complete for ARIMSS995-11_1.fastq.gz
-    ...
-    Approx 90% complete for ARIMSS995-11_1.fastq.gz
-    Approx 95% complete for ARIMSS995-11_1.fastq.gz
-    Analysis complete for ARIMSS995-11_1.fastq.gz
-    Started analysis of ARIMSS995-11_2.fastq.gz
-    Approx 5% complete for ARIMSS995-11_2.fastq.gz
-    Approx 10% complete for ARIMSS995-11_2.fastq.gz
-    Approx 15% complete for ARIMSS995-11_2.fastq.gz
-    ...
-    Approx 90% complete for ARIMSS995-11_2.fastq.gz
-    Approx 95% complete for ARIMSS995-11_2.fastq.gz
-    Analysis complete for ARIMSS995-11_2.fastq.gz
-
-
-Now, execute the command ``ls -lh`` and you should see some new files have appeared. You should see something like this:
+Once FastQC has finished, execute the command ``ls -lh`` and you should see some new files have appeared. You should see something like this:
 
     
-    total 909M
-    -rw-rw-r-- 1 manager manager 773K Apr 10 16:45 ARIMSS995-11_1_fastqc.html
-    -rw-rw-r-- 1 manager manager 513K Apr 10 16:45 ARIMSS995-11_1_fastqc.zip
-    -rwxrwx--- 1 manager manager  72K Mar 23 10:09 ARIMSS995-11_1.fastq.gz
-    -rw-rw-r-- 1 manager manager 789K Apr 10 16:45 ARIMSS995-11_2_fastqc.html
-    -rw-rw-r-- 1 manager manager 525K Apr 10 16:45 ARIMSS995-11_2_fastqc.zip
-    -rwxrwx--- 1 manager manager  67K Mar 23 10:09 ARIMSS995-11_2.fastq.gz
-    -rw-rw-r-- 1 manager manager 602K Apr 10 16:45 ERR1009125_1_fastqc.html
-    -rw-rw-r-- 1 manager manager 289K Apr 10 16:45 ERR1009125_1_fastqc.zip
-    -rwxrwx--- 1 manager manager 101M Mar 23 10:10 ERR1009125_1.fastq.gz
-    -rw-rw-r-- 1 manager manager 598K Apr 10 16:45 ERR1009125_2_fastqc.html
-    -rw-rw-r-- 1 manager manager 291K Apr 10 16:45 ERR1009125_2_fastqc.zip
-    -rwxrwx--- 1 manager manager 106M Mar 23 10:09 ERR1009125_2.fastq.gz
-    -rw-rw-r-- 1 manager manager 605K Apr 10 16:46 ERR1009142_1_fastqc.html
-    -rw-rw-r-- 1 manager manager 297K Apr 10 16:46 ERR1009142_1_fastqc.zip
-    -rwxrwx--- 1 manager manager  79M Mar 23 10:09 ERR1009142_1.fastq.gz
-    -rw-rw-r-- 1 manager manager 600K Apr 10 16:46 ERR1009142_2_fastqc.html
-    -rw-rw-r-- 1 manager manager 295K Apr 10 16:46 ERR1009142_2_fastqc.zip
-    -rwxrwx--- 1 manager manager  84M Mar 23 10:09 ERR1009142_2.fastq.gz
-    -rw-rw-r-- 1 manager manager 563K Apr 10 16:46 ERR200457_1_fastqc.html
-    -rw-rw-r-- 1 manager manager 327K Apr 10 16:46 ERR200457_1_fastqc.zip
-    -rwxrwx--- 1 manager manager 144M Mar 23 10:10 ERR200457_1.fastq.gz
-    -rw-rw-r-- 1 manager manager 564K Apr 10 16:46 ERR200457_2_fastqc.html
-    -rw-rw-r-- 1 manager manager 322K Apr 10 16:46 ERR200457_2_fastqc.zip
-    -rwxrwx--- 1 manager manager 148M Mar 23 10:09 ERR200457_2.fastq.gz
-    -rwxrwx--- 1 manager manager  26K Mar 23 10:10 Metadata.csv
-    -rwxrwx--- 1 manager manager 4.7M Mar 23 10:09 reference_Ss046.fasta
-    -rwxrwx--- 1 manager manager  33K Mar 23 10:09 Ssonei.txt
-    -rw-rw-r-- 1 manager manager 656K Apr 10 16:46 untrimmed_1_fastqc.html
-    -rw-rw-r-- 1 manager manager 378K Apr 10 16:46 untrimmed_1_fastqc.zip
-    -rwxrwx--- 1 manager manager 109M Mar 23 10:09 untrimmed_1.fastq.gz
-    -rw-rw-r-- 1 manager manager 664K Apr 10 16:46 untrimmed_2_fastqc.html
-    -rw-rw-r-- 1 manager manager 391K Apr 10 16:46 untrimmed_2_fastqc.zip
-    -rwxrwx--- 1 manager manager 126M Mar 23 10:09 untrimmed_2.fastq.gz
+total 785M
+-rw-rw-r-- 1 manager manager 634K Jun 17 15:09 CNGB1553_S31_L001_R1_001_fastqc.html
+-rw-rw-r-- 1 manager manager 436K Jun 17 15:09 CNGB1553_S31_L001_R1_001_fastqc.zip
+-rw-rw-r-- 1 manager manager  92M Dec  5  2024 CNGB1553_S31_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 manager manager 631K Jun 17 15:09 CNGB1553_S31_L001_R2_001_fastqc.html
+-rw-rw-r-- 1 manager manager 443K Jun 17 15:09 CNGB1553_S31_L001_R2_001_fastqc.zip
+-rw-rw-r-- 1 manager manager 104M Dec  5  2024 CNGB1553_S31_L001_R2_001.fastq.gz
+-rw-rw-r-- 1 manager manager 585K Jun 17 15:09 CNGB1797_S7_L001_R1_001_fastqc.html
+-rw-rw-r-- 1 manager manager 355K Jun 17 15:09 CNGB1797_S7_L001_R1_001_fastqc.zip
+-rw-rw-r-- 1 manager manager 124M May 22 19:24 CNGB1797_S7_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 manager manager 588K Jun 17 15:09 CNGB1797_S7_L001_R2_001_fastqc.html
+-rw-rw-r-- 1 manager manager 358K Jun 17 15:09 CNGB1797_S7_L001_R2_001_fastqc.zip
+-rw-rw-r-- 1 manager manager 129M May 22 19:23 CNGB1797_S7_L001_R2_001.fastq.gz
+-rw-rw-r-- 1 manager manager 594K Jun 17 15:09 CNGB39120_S21_L001_R1_001_fastqc.html
+-rw-rw-r-- 1 manager manager 375K Jun 17 15:09 CNGB39120_S21_L001_R1_001_fastqc.zip
+-rw-rw-r-- 1 manager manager 166M Jun  7 00:59 CNGB39120_S21_L001_R1_001.fastq.gz
+-rw-rw-r-- 1 manager manager 593K Jun 17 15:09 CNGB39120_S21_L001_R2_001_fastqc.html
+-rw-rw-r-- 1 manager manager 377K Jun 17 15:09 CNGB39120_S21_L001_R2_001_fastqc.zip
+-rw-rw-r-- 1 manager manager 167M Jun  7 00:59 CNGB39120_S21_L001_R2_001.fastq.gz
 
 
-We are most interested in the HTML files, which contain the FastQC reports for our fastq files. Let's open the HTML files generated for the two samples we are working with.
+We are most interested in the HTML files, which contain the FastQC reports for our fastq files. Let's open the HTML files generated for all the samples we are working with.
 
 Use the following command as an example:
 
-    firefox ARIMSS995-11_*.html &
+    firefox CNGB1553_*.html &
 
 > **Note**: Don't worry if error messages appear on the command line, just hit enter to get back the prompt.
 
@@ -376,11 +342,13 @@ For now, we are just going to look at
 - Per-base sequence quality 
 - Adapter content
 
-**Analysing FastQC reports, how many reads are there? Does this answer match your previous answer for sample ARIMSS995-11 (based on ``wc`` command)?**
+Try to answer the following questions analysing FastQC results for Illumina reads:
 
-**With respect to quality scores, which of the two files has better-quality data: *ARIMSS995-11_1.fastq.gz* or *ARIMSS995-11_2.fastq.gz*?**
+**Analysing FastQC reports, how many reads are there? Does this answer match your previous answer for sample CNGB1553 (based on ``wc`` command)?**
 
-**Besides sequence differences, are there any other differences related to run quality between the two samples we analysed (ARIMSS995-11 and untrimmed)?**
+**What is the average depth of coverage for these samples??**
+
+**With respect to quality scores, is the quality of read 1 exactly the same as that of read 2? Do you see the same in all the samples?**
 
 **Are these datasets contaminated with any Illumina sequencing adapter oligonucleotides?**
 
@@ -388,7 +356,8 @@ Now, we are going to look at how we can remove poor data and adapter contaminati
 
 We will need to do some minor trimming (quality 25, length 50) as well as checking/removing Illumina adapter sequences:
 ```
-trim_galore -q 25 --length 50 --paired --illumina --fastqc ARIMSS995-11_1.fastq.gz ARIMSS995-11_2.fastq.gz
+mkdir trimmed
+trim_galore -q 25 --length 50 --paired --illumina --fastqc -o trimmed CNGB1553_S31_L001_R1_001.fastq.gz CNGB1553_S31_L001_R2_001.fastq.gz
 ```
 
 -q 25 = trim the 3’ end of the reads – remove nucleotides less than Phred Quality 25
@@ -401,32 +370,21 @@ trim_galore -q 25 --length 50 --paired --illumina --fastqc ARIMSS995-11_1.fastq.
 
 --fastqc = run FastQC in the default mode on the FastQ file once trimming is complete
 
-Once trim_galore has finished, check the outputs. You should see that two new FASTQ (.fq) files have been created by trim_galore:
+-o = all output will be written to this directory
 
-ARIMSS995-11_1_val_1.fq.gz
+Once Trim Galore has finished, check the outputs. You should see that two new FASTQ (.fq) files have been created inside the "trimmed" folder:
 
-ARIMSS995-11_2_val_2.fq.gz
+CNGB1553_S31_L001_R1_001_val_1.fq.gz
+
+CNGB1553_S31_L001_R2_001_val_2.fq.gz
 
 **How many paired reads are left in the sample after trimming? Compare them with the fastq files obtained from the sequencer**
 
-If you have extra time, you could try trimming the 'untrimmed' sample!
+Now, do the same for samples CNGB1797 and CNGB39120 and compare the outputs with their respective untrimmed files.
 
 ## [QC of long data](#QC-of-long-data)
 
-The file we will working with for this part of the exercise is in a Google Drive link, so let's download it to our VM:
-
-[https://drive.google.com/file/d/1QqNDYqGfQbkcJrP4nchXvdL94BCvAUQf/view?usp=sharing](https://drive.google.com/file/d/1QqNDYqGfQbkcJrP4nchXvdL94BCvAUQf/view?usp=sharing)
-
-
-Now we want to move that file into our current working directory (Module_1_Sequencing_QC):
-
-```
-mv /home/manager/Downloads/CTMA_1441_longds.fastq.gz .
-```
-
-Remember to check that you have moved correctly this file!
-
-Let's check the quality of the reads we have downloaded:
+Let's check the quality of the reads for sample CTMA_1441 which was sequenced by an Oxford Nanopore sequencer:
 
 ```
 NanoPlot -o nanoplot/CTMA_1441_longds --tsv_stats --info_in_report --N50 --no_static --prefix CTMA_1441_longds_ --fastq CTMA_1441_longds.fastq.gz
@@ -475,21 +433,14 @@ See summarized report in a browser:
 
     firefox multiqc_report.html &
 
-## [Short quiz on Linux](#short-quiz-on-Linux)
+## [Wrap up questions](#Wrap-up-questions)
 
-If after this module you have time and you feel you need to practice more some of the commands you've learnt in the pre-course "Introduction to Linux for biologists", here's a short quiz to do so: 
+1) What information did you get about the sequencing runs?
+2) What do you think about the quality of the sequenced data analyzed in this module? 
+3) Did the trimming solved all the quality issues encountered in all the samples?
+4) Would you use these sequences for further analyses? Why?
 
-1. Extract the first 15 lines from file “reference_Ss046.fasta” and save the output into “output.fa” 
-2. How many files are there in the Module_1_Sequencing_QC directory? 
-3. Create a new file called “Module_1_Sequencing_QC.txt” which contains a list of the file names present in the Module_1_Sequencing_QC directory.
-4. Get the list of countries that contributed *S. sonnei* genome sequences for the publication previously mentioned and save it to “countries.txt” 
-5. Extract the Assembly accessions of the sequences in “Ssonei.txt” and save it to “assemblies.txt”. How many are there?
-6. Given a file with different sequences of Latin America, how do you count the ones submitted by Chile? (we know they should have the word “CHI” in the line).
-7.  .............is the command used to create a new directory.
-8. Command used to create an empty file.
-9. "cat" is the command used to ...................
-10. ............. command is used to count the total number of lines, words and characters in a file. 
-11. Which command would you use to know the location of your current working directory?
+
 
 [<<< Go back to Manual Contents Page](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Manual_main.md)
 
