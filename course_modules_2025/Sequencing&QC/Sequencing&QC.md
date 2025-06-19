@@ -69,50 +69,6 @@ Command line shortcuts
 ```
 ## [Commonly used file formats for NGS data](#commonly-used-file-formats-for-NGS-data)
 
-### FASTQ
-
-The widely used FASTA file format has the great advantage of simplicity. However, this simplicity can be restrictive if we want to include additional data/metadata in addition to the sequence.
-
-Given the non-negligible error rates of NGS technologies, often we need to accompany our sequence data with quality scores that estimate our confidence in the accuracy of the sequence data. As we will see later, this allows us to perform quality control checks and filter-out poor-quality data before performing analyses.
-
-**FASTQ** is a simple text-based format that allows us to include quality scores. A single sequence is represented by four lines of text:
-
-    @ERR8261968.1 1 length=97
-    ACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACTTTAAAATCTGTGTGGCTGTCACTCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTA
-    +ERR8261968.1 1 length=97
-    CCCCCFDDFFFFGGGGGGGGGGHHHHHHHHHHHGGGGHHHHHHHHHHHHHHHGHHGHHIIHHGGGGGGHHHHHHHHHHHHHHHHHHHGGGHHHHHHH
-
-- The first line is a 'header' containing a unique identifier for the sequence and, optionally, further description.
-- The second line contains the actual nucleotide sequence.
-- The third line is redundant  and can be safely ignored. Sometimes it simply repeats the first line. Sometimes it is blank or just contains a '+' character.
-- The fourth line contains a string of characters that encode quality scores for each nucleotide in the sequence on [ASCII code](https://en.wikipedia.org/wiki/ASCII). 
-
-Each single character encodes a score, typically a number between 0 and 40; this score is encoded by a single character.
-
-| Character | ASCII | FASTQ quality score (ASCII – 33) 
-| --|--|--
-| ! | 33 | 0
-| “ | 34 | 1
-| # | 35 | 2
-| $ | 36 | 3
-| % | 37 | 4
-| ... | ... | ...
-| C | 67 | 34
-| D | 68 | 35
-| E | 69 | 36
-| F | 70 | 37
-| G | 71 | 38
-| H | 72 | 39
-|40 | 73 | 40
-
-So, in the example above, we can see that most of the positions within the 97-nucleotide sequence have scores in the high 30s, which indicates a high degree of confidence in their accuracy.
-- A score of 30 denotes a 1 in 1000 chance of an error, i.e. 99.9% accuracy.
-- A score of 40 denotes a 1 in 10,000 chance of an error, i.e. 99.99% accuracy.
-
-You can read more about the FastQ file format and quality scores here:
-
-Cock, P. J., Fields, C. J., Goto, N., Heuer, M. L., & Rice, P. M. (2010). The Sanger FASTQ file format for sequences with quality scores, and the Solexa/Illumina FASTQ variants. *Nucleic Acids Research*, **38**, 1767–1771. https://doi.org/10.1093/nar/gkp1137.
-
 ### FASTA
 
 Among the most common and simplest file formats for representing nucleotide sequences is FASTA.  Essentially, each sequence is represented by a 'header' line that begins with a '>', followed by lines containing the actual nucleotide sequence. By convention, the first 'word' in the header line is a unique identifier, which is usually the accession number. Consider this portion of the whole genome of *Staphylococcus aureus* MRSA252 as an example of a FASTA-formatted nucleotide sequence:
@@ -186,6 +142,50 @@ AGTATGGCAAATTAA
 
 If you want a more detailed history of the FASTA file format, then you could take a look at the Wikipedia page here: https://en.wikipedia.org/wiki/FASTA_format.
 
+### FASTQ
+
+The widely used FASTA file format has the great advantage of simplicity. However, this simplicity can be restrictive if we want to include additional data/metadata in addition to the sequence.
+
+Given the non-negligible error rates of NGS technologies, often we need to accompany our sequence data with quality scores that estimate our confidence in the accuracy of the sequence data. As we will see later, this allows us to perform quality control checks and filter-out poor-quality data before performing analyses.
+
+**FASTQ** is a simple text-based format that allows us to include quality scores. A single sequence is represented by four lines of text:
+
+    @ERR8261968.1 1 length=97
+    ACTTTCGATCTCTTGTAGATCTGTTCTCTAAACGAACTTTAAAATCTGTGTGGCTGTCACTCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTA
+    +ERR8261968.1 1 length=97
+    CCCCCFDDFFFFGGGGGGGGGGHHHHHHHHHHHGGGGHHHHHHHHHHHHHHHGHHGHHIIHHGGGGGGHHHHHHHHHHHHHHHHHHHGGGHHHHHHH
+
+- The first line is a 'header' containing a unique identifier for the sequence and, optionally, further description.
+- The second line contains the actual nucleotide sequence.
+- The third line is redundant  and can be safely ignored. Sometimes it simply repeats the first line. Sometimes it is blank or just contains a '+' character.
+- The fourth line contains a string of characters that encode quality scores for each nucleotide in the sequence on [ASCII code](https://en.wikipedia.org/wiki/ASCII). 
+
+Each single character encodes a score, typically a number between 0 and 40; this score is encoded by a single character.
+
+| Character | ASCII | FASTQ quality score (ASCII – 33) 
+| --|--|--
+| ! | 33 | 0
+| “ | 34 | 1
+| # | 35 | 2
+| $ | 36 | 3
+| % | 37 | 4
+| ... | ... | ...
+| C | 67 | 34
+| D | 68 | 35
+| E | 69 | 36
+| F | 70 | 37
+| G | 71 | 38
+| H | 72 | 39
+|40 | 73 | 40
+
+So, in the example above, we can see that most of the positions within the 97-nucleotide sequence have scores in the high 30s, which indicates a high degree of confidence in their accuracy.
+- A score of 30 denotes a 1 in 1000 chance of an error, i.e. 99.9% accuracy.
+- A score of 40 denotes a 1 in 10,000 chance of an error, i.e. 99.99% accuracy.
+
+You can read more about the FastQ file format and quality scores here:
+
+Cock, P. J., Fields, C. J., Goto, N., Heuer, M. L., & Rice, P. M. (2010). The Sanger FASTQ file format for sequences with quality scores, and the Solexa/Illumina FASTQ variants. *Nucleic Acids Research*, **38**, 1767–1771. https://doi.org/10.1093/nar/gkp1137.
+
 ### SAM and BAM
 
 A **SAM file** (usually named *.sam) is used to represent aligned sequences. It is particularly useful for storing the results of genomic or transcriptomic sequence reads aligned against a reference genome sequence. The **BAM file** format is a compressed form of SAM. This has the disadvantage that it is not readable by a human but has the advantage of being smaller than the corresponding SAM file and thus easier to share and copy between locations.
@@ -233,76 +233,60 @@ For this module, we will be working with files which are inside the folder "Modu
 
 ## [QC of short data](#QC-of-short-data)
 
-Inside the directory "Module_1_Sequencing_QC", we have 10 compressed fastq files as fastq.gz. You can check that the files are there. Do you remember how to do that?
+Inside the directory "Module_1_Sequencing_QC", we have 7 compressed fastq files as fastq.gz. You can check that the files are there. Do you remember how to do that?
 
-We will work with files:
+We will start working with files:
 ```
-ARIMSS995-11_1.fastq.gz
-ARIMSS995-11_2.fastq.gz
+CNGB1553_S31_L001_R1_001.fastq.gz
+CNGB1553_S31_L001_R2_001.fastq.gz
 ```
 
 As we saw in the introduction, this is the format we will get from an Illumina paired-end run. To have a better look at their structure, we will uncompress them:
 ```
-gzip -d ARIMSS995-11_1.fastq.gz
+gzip –d CNGB1553_S31_L001_R1_001.fastq.gz
 ```
 Wait until the command line is shown again on the screen and then type:
 ```
-gzip -d ARIMSS995-11_2.fastq.gz
+gzip –d CNGB1553_S31_L001_R2_001.fastq.gz
 ```
 
-The files should be decompressed now and ready to work. Let’s have a look at one of the fastq files:
+The files should be decompressed now. Let’s have a look at one of the fastq files:
 
 ```
-head ARIMSS995-11_1.fastq
+head CNGB1553_S31_L001_R1_001.fastq
 ```
 
 You should see something like this:
 
 ```
-@M03346:10:000000000-AL260:1:1101:28195:9448 1:N:0:3
-CCTCATCAGCCGCATTGCGACCAACTTCTGGATTAGCGCCAGCGCCCAGTCCTTTG
-GTGATACCGCTACCGATTTGAATCGTCTGTCCAACCGCTGTTTTACGCAGCGCTTGT
-GCATCGGTATTTACCGCGAAGAATTCAACACCTTCAATACGCTCGCGCACCATGTGT
-TCAACAGCATTACCGCCGCCGCCGCCGACGCCGATGACTTTAATCACCGCGTCATT
-GGTAAGTTCCATTGGTTCAAACATA
+@M06899:234:000000000-L956R:1:1101:18268:1886 1:N:0:CGTACAGGAA+TAGGTTCTCT
+TCACATCACCCTGCTGTGCAATCGCTCTCGCCAGAAAGACGCGTTTCTTTTGTCCACCTTAAAGCTCGCCGATTTTTCGCTGTCTCTTATACACATCTCCGAGCCCACGTGACCGTACAGGAAATCTCGTATGCCGTCTTCTGCTTGAATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 +
-ABCCCFFFFFFCGGGGGGGGGGGHGHHHHHGHHHHHHGGGGGGGGGGGHHHHH
-HHHHHGHHHHHGGGGGHGGGGGHHHHHHHHHGHHHHHHGGGGGFHHHHHGGG
-GGGGGGGHHHHHHGGFHGHHHHHGGGGGGGHHHHHHHHGGHHHHHHGHEGGG
-GGGGGGGGGGGGGGGGGGGGGGGFFFFFFFFFFFFFFFFFCFFFFFFAFFFFFFFFF
-FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFFFFB
-@M03346:10:000000000-AL260:1:1101:5008:22354 1:N:0:3
-TCTGTGTGGGGCGCTGATTATAGACGTTACGGCTGCAATCTTCATCTGTTTGTATGG
-ATATCGCTTCTCGGGTATTGTTCTCACCCGGTGCTATCGCCGTTTTTCCTGCAAGGT
-TTTATTTTCATGTCACAGTCTACATCCGTGCTTCGTCGTAATGGATTTACTTTTAAACA
-GTTTTTTGTTGCTCACGATCGCTGTGCGATGAAAGTGGGAACGGATGGCATTTTGC
-TGGGCGCATGGGCACCGGTGGG
+A11>1DC1D>CAGFGCGGFEGGHGCGFHD0AAAE0AF10A//AEEE1FHHHBGAAA1B0111111B@/////>?F1B0//?>E@FDGH1F222>1B>B1>////<///////<1>?<AAG0000@1@<0?/?011/?->F<F11=F10111110-----:---9----9---9--------9-9---9-9------99--9-9-9---999----99--999-9-9--9--9-99---------99-9>--
+@M06899:234:000000000-L956R:1:1101:18433:1899 1:N:0:CGTACAGGAA+TAGGTTCTCT
+GTTCTGCAAAACACGAAAAACAAAGGTGACGTTGCGATCGGTGCAACGGTAACTGATGCCTCCGCGGTACTGGCTACAGATTACAAAATCTCGTTCGATAATAATCAGTGGCAGGTCACCCGCCTTGCCAGTAATACCACTTTTACGGTGACGCCGTATGCCAACTGTAAAGCTGTCTCTTATACACATCTCCGATCCCACGAGACCTTACAGGTAATTTCTTATGCCGTCTTCTTCTTTTAATAAATTTT
 +
-AAABAFDFAAB>EAEGEGGFGGHHHFFFHAFGGGGGGHHHHHHGHGHHHHHHHHH
-HHBFFHGGFHEEGGGEG?/GHHHHGHFFHH1EEEEGHFHFGE?EBDGFGHDHFFHH
-HGGGHGGHHHHGDHHH?<<GHFHFHHDGHFDGGGGHHDGDGGHFEHHEHHHDDD
-HGHGFCCFCGHHHGGGGGGFGFFFE?E.ADFGG/0.CEFFGGFFF/EEF.AD.DBFFFFF
-FFF/;/FF.;@-ADFE99..;B--;-
+1AAAABDDFBCCFGE?11EAEGH00BGF1AAFFEE?/FA//E/E11A//B/ABG11F111D1/////E/>FB1/01>111BF1@1110B>GE0?F0//B//B>2FE11B20/0//FFFFFG//<?C11111?11@11111?GHH11<.>..<..<--.</0<00.//<00000;0<0C0GG0C00090;9B00.-.-.909---.99/9/9//////9/;//9/////-;-9;/9//9B////////////
 ```
 
 **Remembering the fastq file format, how many reads do you have represented in the previous box?**
 
-Now, let’s check how many reads we have in ARIMSS995-11_1.fastq.gz and ARIMSS995-11_2.fastq.gz, and double check we have the same number in the R1 and R2 files. We can use the `wc` command with the -l (letter elle) option to count the number of lines in the file:
+Now, let’s check how many reads we have in CNGB1553_S31_L001_R1_001.fastq and CNGB1553_S31_L001_R2_001.fastq, and double check we have the same number in the R1 and R2 files. We can use the `wc` command with the -l (letter elle) option to count the number of lines in the file:
 
 ```
-wc -l ARIMSS995-11_1.fastq
+wc -l CNGB1553_S31_L001_R1_001.fastq
 ```
 **How many paired reads are in the sample?**
 >Hint: Think about how many lines a single read takes up in FASTQ format.
 
 **Does the number of reads in R1 and R2 files match?**
 
-Let's examine the quality of these sequence data using [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). We will only use the two fastq files we have been working with and two additional ones located in the same directory named 'Module_1_Sequencing_QC'. The file names are: **untrimmed_1.fastq.gz** and **untrimmed_2.fastq.gz**. 
+Let's examine the quality of all the sequence data present in the "Module_1_Sequencing_QC" folder using [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).  
 
-First, for the sake of simplicity, let’s compress again the two fastq files belonging to sample ARIMSS995-11:
+First, for the sake of simplicity, let’s compress again the two fastq files belonging to sample CNGB1553:
 
 ```
-gzip ARIMSS995-11_*.fastq
+gzip CNGB1553_*.fastq
 ```
 
 Going back to FastqQC, we can launch the graphical interface by simply executing ``fastqc`` on the Terminal command line. However, it is often more convenient to use the software in the command-line mode. Execute the following command in the Terminal:
