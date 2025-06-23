@@ -319,7 +319,7 @@ We are most interested in the HTML files, which contain the FastQC reports for o
 
 Use the following command as an example:
 
-    firefox CNGB1553_*.html &
+    firefox fastqc_raw/CNGB1553_*.html &
 
 > **Note**: Don't worry if error messages appear on the command line, just hit enter to get back the prompt.
 
