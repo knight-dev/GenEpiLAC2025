@@ -61,7 +61,7 @@ Command line shortcuts
 ●	Ctrl+a: Move cursor to start of line 
 ●	Ctrl+e: Move cursor to end of line 
 ●	Alt+: Alternates between terminals 
-●	Ctrl+l: Clear screen (or Command+k on Mac) 
+●	Ctrl+l: Clear screen 
 ●	Ctrl+c: Terminates the running program 
 ●	Ctrl+z: Suspends the running program 
 ●	Ctrl+w: Removes a previous word 
