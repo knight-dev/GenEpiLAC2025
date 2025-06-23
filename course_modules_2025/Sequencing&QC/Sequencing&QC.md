@@ -20,9 +20,11 @@
   - [Bonus](#bonus)
   - [Wrap up questions](#Wrap-up-questions)
 
-## Module Overview and Aims
+## Module Aims
 
-In this module, we are going to get familiar with several common file formats used for sequence data and then we are going to perform some quality control (QC) on some FASTQ-formatted sequence data obtained from both short and long reads sequencing technologies.
+1. Perform quality control (QC) assessments on FASTQ-formatted sequence data obtained from both short and long reads sequencing technologies.
+2. Identify possible contamination in high throughput sequence data.
+3. Critically evaluate and interpret QC outputs to determine data reliability.
 
 # [Introduction](#introduction)
 
