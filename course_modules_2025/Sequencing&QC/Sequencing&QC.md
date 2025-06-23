@@ -334,7 +334,7 @@ For now, we are just going to look at
 - Per-base sequence quality 
 - Adapter content
 
-Try to answer the following questions analysing FastQC results for Illumina reads:
+Try to answer the following questions analysing FastQC results for samples CNGB1553, CNGB1797 and CNGB39120:
 
 **Analysing the FastQC reports, how many reads are there? Does this answer match your previous answer for sample CNGB1553 (based on ``wc`` command)?**
 
