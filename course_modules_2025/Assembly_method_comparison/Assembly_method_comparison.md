@@ -211,7 +211,7 @@ unicycler -t 4 -1 S_aureus_JKD6159_Illumina.s100.ds500000-reads_1.fastq.gz -2 S_
 To get `dragonflye` running in the virtual machine, it has been installed using a tool called `mamba` (similar to `conda`). We need to 'activate' `mamba` to make `dragonflye` available:
 
 ```
-conda activate dragonflye
+conda activate dragonflye-env
 ```
 
 <br>
@@ -380,6 +380,12 @@ Your outputs will look slightly different, depending on which assembler and type
 
 
 ## Run Quast
+
+We first need to load the conda environment for quast:
+```
+conda activate quast-env
+```
+
 
 To run quast on your assembly we:
 
