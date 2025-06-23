@@ -350,8 +350,19 @@ Before we continue working with our data, we want to check that the sequences in
 mkdir kraken2
 kraken2 -db /home/manager/kraken2_database --threads 4 --gzip-compressed --paired --report kraken2/CNGB1553_kraken2.txt --use-names CNGB1553_S31_L001_R1_001.fastq.gz CNGB1553_S31_L001_R2_001.fastq.gz
 ```
+-db = name for Kraken2 database
 
-Repeat this analysis for samples CNGB1797 and CNGB39120.
+--threads = number of threads
+
+--gzip-compressed = input files are compressed with gzip
+
+--paired = the filenames provided have paired-end reads
+
+--report = print a report with aggregrate counts/clade to file
+
+--use-names = print scientific names instead of just taxids
+
+Repeat the previous command for samples CNGB1797 and CNGB39120.
 
 **What is the most abundant species identified in each sample?**
 
