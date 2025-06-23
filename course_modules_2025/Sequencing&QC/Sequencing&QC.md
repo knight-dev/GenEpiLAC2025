@@ -223,7 +223,7 @@ FastQC can be run in one of two modes. It can either run as a stand alone intera
 
 FastQC will highlight any areas where the library looks unusual and where you should take a closer look. The program is not tied to any specific type of sequencing technique and can be used to look at libraries coming from a large number of different experiment types (Genomic Sequencing, ChIP-Seq, RNA-Seq, BS-Seq etc etc).
 
-Different softwares for assesing the quality of reads have been developed. Another useful software for checking the quality of long-reads is **NanoPlot**. NanoPlot assess characteristics relevant to long-read genome sequencing and produces different number of plots depending on the data. A detailed view can be seen on [here](https://github.com/wdecoster/NanoPlot#plots-generated).
+Different softwares for assesing the quality of reads have been developed. Another useful software for checking the quality of long-reads is **NanoPlot**. NanoPlot assess characteristics relevant to long-read genome sequencing and produces different number of plots depending on the data. A detailed view can be seen [here](https://github.com/wdecoster/NanoPlot#plots-generated).
 
 It is very common to have some quality metrics fail after running FastQC, and this may or may not be a problem for your downstream application. But don't worry there are softwares developed to filter poor quality reads and trim poor quality bases or adapters from our samples. In this module we will be working with [**TrimGalore**](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) for short reads and with [**Filtlong**](https://github.com/rrwick/Filtlong) for Oxford Nanopore reads.
 
