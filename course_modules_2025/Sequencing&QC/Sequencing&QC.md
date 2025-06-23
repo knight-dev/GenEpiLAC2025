@@ -254,11 +254,11 @@ CNGB1553_S31_L001_R2_001.fastq.gz
 
 As we saw in the introduction, this is the format we will get from an Illumina paired-end run. To have a better look at their structure, we will uncompress them:
 ```
-gzip –d CNGB1553_S31_L001_R1_001.fastq.gz
+gzip -d CNGB1553_S31_L001_R1_001.fastq.gz
 ```
 Wait until the command line is shown again on the screen and then type:
 ```
-gzip –d CNGB1553_S31_L001_R2_001.fastq.gz
+gzip -d CNGB1553_S31_L001_R2_001.fastq.gz
 ```
 
 The files should be decompressed now. Let’s have a look at one of the fastq files:
