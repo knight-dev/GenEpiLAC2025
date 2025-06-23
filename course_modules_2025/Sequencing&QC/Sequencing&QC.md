@@ -229,7 +229,7 @@ It is very common to have some quality metrics fail after running FastQC, and th
 
 >**Note**: **Porechop** is a tool for finding and removing adapters from Oxford Nanopore reads. Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle, it is treated as chimeric and chopped into separate reads. We won't be using this software in this module but you could try it with your data! More information [here](https://github.com/rrwick/Porechop).
 
-Last but not least, it is always a good idea to check that your data belongs to the species you expect it to be before you carry on with your analyses. We could identify contamination using either one of two ways:
+Last but not least, it is always a good idea to check that your data belongs to the species you expect it to be before you carry on with your downstream analysis. We could identify contamination using either one of two ways:
 1) The GC content varies between species, so a shift in GC content could be an indication of sample contamination.
 2) Using specialized tools to determine/predict the species composition of your sample. We will determine species composition using [**kraken2**](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown). Kraken is a taxonomic sequence classifier that assigns taxonomic labels to DNA sequences. Kraken examines the k-mers within a query sequence and uses the information within those k-mers to query a database.
 
