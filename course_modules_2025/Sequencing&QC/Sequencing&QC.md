@@ -219,13 +219,23 @@ FastQC can be run in one of two modes. It can either run as a stand alone intera
 
 ![fastqc](https://user-images.githubusercontent.com/65819144/230931477-4ed32628-11d5-4b1a-bfe6-70633185eeec.png)
 
-FastQC will highlight any areas where this library looks unusual and where you should take a closer look. The program is not tied to any specific type of sequencing technique and can be used to look at libraries coming from a large number of different experiment types (Genomic Sequencing, ChIP-Seq, RNA-Seq, BS-Seq etc etc).
+FastQC will highlight any areas where the library looks unusual and where you should take a closer look. The program is not tied to any specific type of sequencing technique and can be used to look at libraries coming from a large number of different experiment types (Genomic Sequencing, ChIP-Seq, RNA-Seq, BS-Seq etc etc).
 
 Different softwares for assesing the quality of reads have been developed. Another useful software for checking the quality of long-reads is **NanoPlot**. NanoPlot assess characteristics relevant to long-read genome sequencing and produces different number of plots depending on the data. A detailed view can be seen on [here](https://github.com/wdecoster/NanoPlot#plots-generated).
 
 It is very common to have some quality metrics fail after running FastQC, and this may or may not be a problem for your downstream application. But don't worry there are softwares developed to filter poor quality reads and trim poor quality bases or adapters from our samples. In this module we will be working with [**TrimGalore**](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) for short reads and with [**Filtlong**](https://github.com/rrwick/Filtlong) for Oxford Nanopore reads.
 
 >**Note**: **Porechop** is a tool for finding and removing adapters from Oxford Nanopore reads. Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle, it is treated as chimeric and chopped into separate reads. We won't be using this software in this module but you could try it with your data! More information [here](https://github.com/rrwick/Porechop).
+
+Last but not least, it is always a good idea to check that your data belongs to the species you expect it to be before you carry on with your analyses. We could identify contamination using either one of two ways:
+1) The GC content varies between species, so a shift in GC content could be an indication of sample contamination.
+2) Using specialized tools to determine/predict the species composition of your sample. We will determine species composition using [**kraken2**](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown). Kraken is a taxonomic sequence classifier that assigns taxonomic labels to DNA sequences. Kraken examines the k-mers within a query sequence and uses the information within those k-mers to query a database.
+
+    **What are k-mers?**
+    A k-mer is a sequence of k characters in a DNA sequence.
+    So, for example, the sequence ATCGATCAC contains the following 3-mers (k-mer of size 3):
+   ![k-mer](https://github.com/user-attachments/assets/e0e4cf3e-d055-42cc-8f5b-ec42d2236626)
+
 
 # [Practical Exercise](#practical-exercise)
 
@@ -298,29 +308,11 @@ Going back to FastQC, we can launch the graphical interface by simply executing 
 
 > **Note**: instead of compressing the files again with gzip, you could also use the command `fastqc *.fastq*`. By adding a star symbol after `.fastq`, fastqc will run in all files that include `.fastq` as part of the extension (zipped and unzipped)
          
-Once FastQC has finished, execute the command ``ls -lh`` and you should see some new files have appeared. You should see something like this:
+Once FastQC has finished, execute the command
 
-    
-total 785M
--rw-rw-r-- 1 manager manager 634K Jun 17 15:09 CNGB1553_S31_L001_R1_001_fastqc.html
--rw-rw-r-- 1 manager manager 436K Jun 17 15:09 CNGB1553_S31_L001_R1_001_fastqc.zip
--rw-rw-r-- 1 manager manager  92M Dec  5  2024 CNGB1553_S31_L001_R1_001.fastq.gz
--rw-rw-r-- 1 manager manager 631K Jun 17 15:09 CNGB1553_S31_L001_R2_001_fastqc.html
--rw-rw-r-- 1 manager manager 443K Jun 17 15:09 CNGB1553_S31_L001_R2_001_fastqc.zip
--rw-rw-r-- 1 manager manager 104M Dec  5  2024 CNGB1553_S31_L001_R2_001.fastq.gz
--rw-rw-r-- 1 manager manager 585K Jun 17 15:09 CNGB1797_S7_L001_R1_001_fastqc.html
--rw-rw-r-- 1 manager manager 355K Jun 17 15:09 CNGB1797_S7_L001_R1_001_fastqc.zip
--rw-rw-r-- 1 manager manager 124M May 22 19:24 CNGB1797_S7_L001_R1_001.fastq.gz
--rw-rw-r-- 1 manager manager 588K Jun 17 15:09 CNGB1797_S7_L001_R2_001_fastqc.html
--rw-rw-r-- 1 manager manager 358K Jun 17 15:09 CNGB1797_S7_L001_R2_001_fastqc.zip
--rw-rw-r-- 1 manager manager 129M May 22 19:23 CNGB1797_S7_L001_R2_001.fastq.gz
--rw-rw-r-- 1 manager manager 594K Jun 17 15:09 CNGB39120_S21_L001_R1_001_fastqc.html
--rw-rw-r-- 1 manager manager 375K Jun 17 15:09 CNGB39120_S21_L001_R1_001_fastqc.zip
--rw-rw-r-- 1 manager manager 166M Jun  7 00:59 CNGB39120_S21_L001_R1_001.fastq.gz
--rw-rw-r-- 1 manager manager 593K Jun 17 15:09 CNGB39120_S21_L001_R2_001_fastqc.html
--rw-rw-r-- 1 manager manager 377K Jun 17 15:09 CNGB39120_S21_L001_R2_001_fastqc.zip
--rw-rw-r-- 1 manager manager 167M Jun  7 00:59 CNGB39120_S21_L001_R2_001.fastq.gz
+    ls -lh fastqc_raw
 
+You should see some new files have appeared inside the directory "fastqc_raw".
 
 We are most interested in the HTML files, which contain the FastQC reports for our fastq files. Let's open the HTML files generated for all the samples we are working with.
 
@@ -332,8 +324,7 @@ Use the following command as an example:
 
 You should then see something like this:
 
-![fastqc1](https://user-images.githubusercontent.com/65819144/230941522-3129125c-9423-4475-b617-1cc868f93786.jpg)
-
+![Imagen1_FastQC](https://github.com/user-attachments/assets/25c170cd-fab5-4cea-9dee-9cccd77ee807)
 
 There is a lot of QC information in these reports. Feel free to explore these in your own time and take a look at the [FastQC homepage](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) where you can find the [explanation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/) to each report FastQC is generating and we recommend you to watch the tutorial video at http://www.youtube.com/watch?v=bz93ReOv87Y.
 
@@ -344,7 +335,7 @@ For now, we are just going to look at
 
 Try to answer the following questions analysing FastQC results for Illumina reads:
 
-**Analysing FastQC reports, how many reads are there? Does this answer match your previous answer for sample CNGB1553 (based on ``wc`` command)?**
+**Analysing the FastQC reports, how many reads are there? Does this answer match your previous answer for sample CNGB1553 (based on ``wc`` command)?**
 
 **What is the average depth of coverage for these samples??**
 
@@ -352,9 +343,21 @@ Try to answer the following questions analysing FastQC results for Illumina read
 
 **Are these datasets contaminated with any Illumina sequencing adapter oligonucleotides?**
 
+Before we continue working with our data, we want to check that the sequences in the fastq files belong to the species we expect. We will use [kraken2](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown). Execute the following command to run kraken2 on sample CNGB1553:
+
+```
+mkdir kraken2
+kraken2 -db /home/manager/kraken2_database --threads 4 --gzip-compressed --paired --report kraken2/CNGB1553_kraken2.txt --use-names CNGB1553_S31_L001_R1_001.fastq.gz CNGB1553_S31_L001_R2_001.fastq.gz
+```
+
+Repeat this analysis for samples CNGB1797 and CNGB39120.
+
+**What is the most abundant species identified in each sample?**
+
+**Are samples contaminated with other bacterial species?**
+
 Now, we are going to look at how we can remove poor data and adapter contamination by trimming and filtering. We will use [TrimGalore](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) by executing the following command on the Terminal:
 
-We will need to do some minor trimming (quality 25, length 50) as well as checking/removing Illumina adapter sequences:
 ```
 mkdir trimmed
 trim_galore -q 25 --length 50 --paired --illumina --fastqc -o trimmed CNGB1553_S31_L001_R1_001.fastq.gz CNGB1553_S31_L001_R2_001.fastq.gz
@@ -405,6 +408,12 @@ firefox nanoplot/CTMA_1441_longds/CTMA_1441_longds_NanoPlot-report.html &
 **How many reads are there in CTMA_1441_longds.fastq.gz?**
 **What is the median read length, N50 and median quality score?**
 
+Before continuing, we will check there are no contaminations in this dataset:
+
+```
+kraken2 -db /home/manager/kraken2_database --threads 4 --gzip-compressed --report kraken2/CTMA_1441_kraken2.txt --use-names CTMA_1441_longds.fastq.gz
+```
+
 Now, let's improve the quality of our long reads using Filtlong. We will remove the worst reads (short length and low accuracy) with --keep_percent 90 and just keep those reads which are longer than 1000 kb (--min-length 1000):
 
 ```
@@ -435,8 +444,8 @@ See summarized report in a browser:
 
 ## [Wrap up questions](#Wrap-up-questions)
 
-1) What information did you get about the sequencing runs?
-2) What do you think about the quality of the sequenced data analyzed in this module? 
+1) What information did you get about the sequencing runs? (Probable platform? Read length?)
+2) What do you think about the quality of the sequenced data analysed in this module? 
 3) Did the trimming solved all the quality issues encountered in all the samples?
 4) Would you use these sequences for further analyses? Why?
 
