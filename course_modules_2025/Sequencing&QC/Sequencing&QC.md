@@ -233,12 +233,10 @@ Last but not least, it is always a good idea to check that your data belongs to 
 1) The GC content varies between species, so a shift in GC content could be an indication of sample contamination.
 2) Using specialized tools to determine/predict the species composition of your sample. We will determine species composition using [**kraken2**](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown). Kraken is a taxonomic sequence classifier that assigns taxonomic labels to DNA sequences. Kraken examines the k-mers within a query sequence and uses the information within those k-mers to query a database.
 
-```
     **What are k-mers?**
     A k-mer is a sequence of k characters in a DNA sequence.
     So, for example, the sequence ATCGATCAC contains the following 3-mers (k-mer of size 3):
-   ![k-mer](https://github.com/user-attachments/assets/e0e4cf3e-d055-42cc-8f5b-ec42d2236626)
-```
+    ![k-mer](https://github.com/user-attachments/assets/e0e4cf3e-d055-42cc-8f5b-ec42d2236626)
 
 # [Practical Exercise](#practical-exercise)
 
