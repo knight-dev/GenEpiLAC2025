@@ -467,7 +467,7 @@ First, navigate to [https://fbreitwieser.shinyapps.io/pavian/](https://fbreitwie
 
 Click on "Browse" and upload the 4 kraken reports we´ve obtained during this module.
 
-Once the upload is complete, click on the "Comparison" tab located on the lef-hand side of the screen.
+Once the upload is complete, click on the "Comparison" tab located on the left-hand side of the screen.
 
 You can decide how to visualize the results clicking on the diffent tabs "Reads", "%", "Any Rank", "Domain", etc. Additionally, by clicking on a specific sample, the visualisation will update to reflect the taxonomic composition of that sample.
 
