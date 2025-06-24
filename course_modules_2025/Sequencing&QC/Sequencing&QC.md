@@ -476,7 +476,7 @@ You can decide how to visualise the results clicking on the different tabs "Read
 ## [Wrap up questions](#Wrap-up-questions)
 
 1) What information did you get about the sequencing runs?
-> Probable platform? Read length?
+> Read length? Probable platform?
 2) What do you think about the quality of the sequenced data analysed in this module? 
 3) Did the trimming solved all the quality issues encountered in all the samples?
 4) Would you use these sequences for downstream analysis? Why?
