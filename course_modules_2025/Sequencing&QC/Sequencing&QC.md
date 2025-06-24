@@ -196,7 +196,7 @@ You can read about SAM and BAM formats here:
  - Li, H., Handsaker, B., Wysoker, A., Fennell, T., Ruan, J., Homer, N., Marth, G., Abecasis, G., Durbin, R., & 1000 Genome Project Data Processing Subgroup (2009). The Sequence Alignment/Map format and SAMtools. *Bioinformatics*, **25**, 2078–2079. https://doi.org/10.1093/bioinformatics/btp352
 -  [https://samtools.github.io/hts-specs/SAMv1.pdf](https://samtools.github.io/hts-specs/SAMv1.pdf).
 
-We can view BAM files graphically using specialised genome browsers software such as (we will be working with one of them in the Genome Visualization Tools module):
+We can view BAM files graphically using specialised genome browsers software such as (we will be working with one of them in the Genome Visualisation Tools module):
 - [IGV](https://igv.org/)
 - [Tablet](https://ics.hutton.ac.uk/tablet/)
 - [Artemis / BAMview](http://sanger-pathogens.github.io/Artemis/Artemis/) 
@@ -469,7 +469,7 @@ Click on "Browse" and upload the 4 kraken reports we´ve obtained during this mo
 
 Once the upload is complete, click on the "Comparison" tab located on the left-hand side of the screen.
 
-You can decide how to visualize the results clicking on the diffent tabs "Reads", "%", "Any Rank", "Domain", etc. Additionally, by clicking on a specific sample, the visualisation will update to reflect the taxonomic composition of that sample.
+You can decide how to visualise the results clicking on the different tabs "Reads", "%", "Any Rank", "Domain", etc. Additionally, by clicking on a specific sample, the visualisation will update to reflect the taxonomic composition of that sample.
 
 
 ## [Wrap up questions](#Wrap-up-questions)
