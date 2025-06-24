@@ -338,7 +338,8 @@ Try to answer the following questions analysing FastQC results for samples CNGB1
 
 **Analysing the FastQC reports, how many reads are there? Does this answer match your previous answer for sample CNGB1553 (based on ``wc`` command)?**
 
-**What is the average depth of coverage for these samples??** (Consider the following genome sizes: CNGB1553 (5 Mb), CNGB1797 (2.8 Mb) and CNGB39120 (4.4 Mb))
+**What is the average depth of coverage for these samples??**
+> **Note**:Consider the following genome sizes: CNGB1553 (5 Mb), CNGB1797 (2.8 Mb) and CNGB39120 (4.4 Mb)
 
 **With respect to quality scores, is the quality of read 1 exactly the same as that of read 2? Do you see the same in all the samples?**
 
@@ -387,7 +388,7 @@ trim_galore -q 25 --length 50 --paired --illumina --fastqc -o trimmed CNGB1553_S
 
 -o = all output will be written to this directory
 
-Once Trim Galore has finished, check the outputs. You should see that two new FASTQ (.fq) files have been created inside the "trimmed" folder:
+Once Trim Galore has finished, check the outputs inside the folder "trimmed". You should see that two new trimmed FASTQ (.fq) files have been created as well as FastQC reports:
 
 CNGB1553_S31_L001_R1_001_val_1.fq.gz
 
