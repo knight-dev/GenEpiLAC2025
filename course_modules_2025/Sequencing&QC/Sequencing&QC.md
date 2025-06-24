@@ -434,10 +434,12 @@ kraken2 -db /home/manager/kraken2_database --threads 4 --gzip-compressed --repor
 Now, let's improve the quality of our long reads using Filtlong. We will remove the worst reads (short length and low accuracy) with --keep_percent 90 and just keep those reads which are longer than 1000 kb (--min-length 1000):
 
 ```
-filtlong --min_length 1000 --keep_percent 90 CTMA_1441_longds.fastq.gz | gzip > CTMA_1441_longds_filt.fastq.gz
+filtlong --min_length 1000 --keep_percent 90 CTMA_1441_longds.fastq.gz | gzip > trimmed/CTMA_1441_longds_filt.fastq.gz
 ```
 
 Adapt the previous code to run NanoPlot on the newly created long-read filtered file (CTMA_1441_longds_filt.fastq.gz)
+
+> Remember the trimmed fastq file is inside the folder "trimmed". 
 
 **Examine the results for the filtered file and try to answer the questions you answered for the unfiltered file. Do you find any difference among these results?**
 
