@@ -429,6 +429,8 @@ Before continuing, we will check there are no contaminations in this dataset:
 kraken2 -db /home/manager/kraken2_database --threads 4 --gzip-compressed --report kraken2/CTMA_1441_kraken2.txt --use-names CTMA_1441_longds.fastq.gz
 ```
 
+**What is the most abundant species identified in this sample?**
+
 Now, let's improve the quality of our long reads using Filtlong. We will remove the worst reads (short length and low accuracy) with --keep_percent 90 and just keep those reads which are longer than 1000 kb (--min-length 1000):
 
 ```
