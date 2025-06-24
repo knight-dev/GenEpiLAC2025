@@ -305,7 +305,7 @@ Going back to FastQC, we can launch the graphical interface by simply executing 
     mkdir fastqc_raw
     fastqc -o fastqc_raw *.fastq.gz
     
-> First run the mkdir command and afterwards fastqc.
+> First run the `mkdir` command and afterwards `fastqc`.
 
 > With this command we will be running FastQC in all the files that have the `.fastq.gz` extension and the output files will appear in the folder "fastqc_raw".
 
