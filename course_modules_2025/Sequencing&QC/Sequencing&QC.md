@@ -445,15 +445,15 @@ Adapt the previous code to run NanoPlot on the newly created long-read filtered 
 
 ## [Bonus](#bonus)
 
-#### What if you had a large number of FastQC reports to analyze?
+#### What if you had a large number of FastQC and kraken2 reports to analyse?
 
-Multiqc (https://multiqc.info/) is a tool that summarizes different types of NGS reports (not just FastQC).
+[**MultiQC**](https://multiqc.info/) is a tool that summarizes different types of NGS reports. It is really interesting for visualising many FastQC reports at once.
 
 First, install the tool:
 
     pip install multiqc
 
-In the folder with reports, run:
+Navigate to the directory "fastqc_raw" and run:
 
     multiqc .
 
@@ -461,9 +461,21 @@ See summarized report in a browser:
 
     firefox multiqc_report.html &
 
+[**Pavian**](https://github.com/fbreitwieser/pavian) is an interactive browser application for analysing and visualisation of results from classifiers such as Kraken 2.
+
+First, navigate to [https://fbreitwieser.shinyapps.io/pavian/](https://fbreitwieser.shinyapps.io/pavian/).
+
+Click on "Browse" and upload the 4 kraken reports we´ve obtained during this module.
+
+Once the upload is complete, click on the "Comparison" tab located on the lef-hand side of the screen.
+
+You can decide how to visualize the results clicking on the diffent tabs "Reads", "%", "Any Rank", "Domain", etc. Additionally, by clicking on a specific sample, the visualisation will update to reflect the taxonomic composition of that sample.
+
+
 ## [Wrap up questions](#Wrap-up-questions)
 
-1) What information did you get about the sequencing runs? (Probable platform? Read length?)
+1) What information did you get about the sequencing runs?
+> Probable platform? Read length?
 2) What do you think about the quality of the sequenced data analysed in this module? 
 3) Did the trimming solved all the quality issues encountered in all the samples?
 4) Would you use these sequences for downstream analysis? Why?
