@@ -333,7 +333,8 @@ There is a lot of QC information in these reports. Feel free to explore these in
 
 For now, we are just going to look at
 - Basic statistics
-- Per-base sequence quality 
+- Per-base sequence quality
+- Per sequence GC content 
 - Adapter content
 
 Try to answer the following questions analysing FastQC results for samples CNGB1553, CNGB1797 and CNGB39120:
