@@ -337,7 +337,6 @@ For now, we are just going to look at
 - Basic statistics
 - Per-base sequence quality
 - Per sequence GC content 
-- Adapter content
 
 Try to answer the following questions analysing FastQC results for samples CNGB1553, CNGB1797 and CNGB39120:
 
@@ -347,8 +346,6 @@ Try to answer the following questions analysing FastQC results for samples CNGB1
 > **Note**: Consider the following genome sizes: CNGB1553 (5 Mb), CNGB1797 (2.8 Mb) and CNGB39120 (4.4 Mb)
 
 **With respect to quality scores, is the quality of read 1 exactly the same as that of read 2? Do you see the same in all the samples?**
-
-**Are these datasets contaminated with any Illumina sequencing adapter oligonucleotides?**
 
 Before we continue working with our data, we want to check that there are no contaminations with other organisms. Although you may have a clue after analysing the "Per sequence GC content" graphs, we will double check by using [kraken2](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown). Execute the following command to run kraken2 on sample CNGB1553:
 
