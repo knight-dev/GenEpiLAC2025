@@ -450,7 +450,7 @@ Adapt the previous code to run NanoPlot on the newly created long-read filtered 
 
 #### What if you had a large number of FastQC and kraken2 reports to analyse?
 
-[**MultiQC**](https://multiqc.info/) is a tool that summarizes different types of NGS reports. It is really interesting for visualising many FastQC reports at once.
+[**MultiQC**](https://multiqc.info/) is a tool that summarises different types of NGS reports. It is really interesting for visualising many FastQC reports at once.
 
 First, install the tool:
 
