@@ -455,6 +455,7 @@ Adapt the previous code to run NanoPlot on the newly created long-read filtered 
 First, install the tool:
 
     pip install multiqc
+    pip install polars-lts-cpu
 
 Navigate to the directory "fastqc_raw" and run:
 
