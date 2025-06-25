@@ -325,6 +325,8 @@ Use the following command as an example:
 
 > **Note**: Don't worry if error messages appear on the command line, just hit enter to get back the prompt.
 
+> You can open HTML files not only through the command line but also by navigating to the folder and double-clicking the file to open it in your preferred browser. 
+
 You should then see something like this:
 
 ![Imagen1_FastQC](https://github.com/user-attachments/assets/25c170cd-fab5-4cea-9dee-9cccd77ee807)
