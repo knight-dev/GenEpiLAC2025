@@ -374,7 +374,7 @@ Repeat the previous command for samples CNGB1797 and CNGB39120.
 
 **Are samples contaminated with other bacterial species?**
 
-Now, we are going to look at how we can remove poor data and adapter contamination by trimming and filtering. We will use [TrimGalore](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) by executing the following command on the Terminal:
+Now, we are going to look at how we can remove poor data and adapter contamination by trimming and filtering. We will use [TrimGalore](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) by executing the following commands on the Terminal:
 
 ```
 mkdir trimmed
