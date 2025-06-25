@@ -300,7 +300,7 @@ First, for the sake of simplicity, let’s compress again the two fastq files be
 gzip CNGB1553_*.fastq
 ```
 
-Going back to FastQC, we can launch the graphical interface by simply executing ``fastqc`` on the Terminal command line. However, it is often more convenient to use the software in the command-line mode. Execute the following commands in the Terminal:
+Going back to FastQC, we can launch the graphical interface by simply executing ``fastqc`` on the command line. However, it is often more convenient to use the software in the command-line mode. Execute the following commands in the Terminal:
 
     mkdir fastqc_raw
     fastqc -o fastqc_raw *.fastq.gz
