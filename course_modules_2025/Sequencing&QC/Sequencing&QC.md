@@ -350,7 +350,7 @@ Try to answer the following questions analysing FastQC results for samples CNGB1
 
 **Are these datasets contaminated with any Illumina sequencing adapter oligonucleotides?**
 
-Before we continue working with our data, we want to check that the sequences in the fastq files belong to the species we expect. We will use [kraken2](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown). Execute the following command to run kraken2 on sample CNGB1553:
+Before we continue working with our data, we want to check that there are no contaminations with other organisms. Although you may have a clue after analysing the "Per sequence GC content" graphs, we will double check by using [kraken2](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown). Execute the following command to run kraken2 on sample CNGB1553:
 
 ```
 mkdir kraken2
