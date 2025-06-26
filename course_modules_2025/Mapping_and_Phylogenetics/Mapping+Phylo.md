@@ -428,7 +428,7 @@ ls -lh
 
 First, let’s extract the old `snippy` runs from our archive file
 ```
-tar -zxf old.snippy.runs_2024.tar.gz
+tar -zxf old.snippy.runs_2025.tar.gz
 ```
 We can see that we now have a new directory `old.snippy.runs_2024`
 ```
