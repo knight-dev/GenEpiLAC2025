@@ -355,7 +355,7 @@ Note that we will explore the differences between these assembly methods more in
 The reads are hosted in the course GitHub repository. If that has been updated on your local VM, the files should be available to access. Let's check:
 
 ```
-ls -lh ~/github_repository/Modules/Mapping_and_Phylo/
+ls -lh ~/github_repository/course_data_2025/mapping_and_phylo/
 ```
 
 ![github.repo.ls](github.repo.ls__2024.png)
@@ -367,7 +367,7 @@ If the files are missing, check with the instructors.
 Assuming they are available, we can copy the assemblies to our current working directory to make things easier:
 
 ```
-cp ~/github_repository/Modules/Mapping_and_Phylo/CTMA_1441.* .
+cp ~/github_repository/course_data_2025/mapping_and_phylo/CTMA_1441.* .
 ```
 
 <br>
