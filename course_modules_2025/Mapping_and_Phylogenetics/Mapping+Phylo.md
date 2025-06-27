@@ -746,6 +746,11 @@ To midpoint root our tree, we will use a simple script written in `python` that 
 less midpoint.root.py
 ```
 
+To make the code work in the VM, we need to load another conda environment:
+```
+conda activate ete3-env
+```
+
 ![midpoint.script](midpoint.root.image.png)
 
 <br>
@@ -754,6 +759,8 @@ We can use this script to midpoint root our tree
 ```
 python midpoint.root.py gubbins.final_tree.tre > gubbins.final_tree.midpoint.tre
 ```
+
+
 
 You can visualise this in `figtree` or `microreact` as above. How does it compare to the unrooted version? 
 
@@ -796,8 +803,10 @@ In the command below, we:
   * `--levels 2`
 * specify a model for delineating genomes - we will use a relaxed clustering model which should maximise the number of clusters we get at level 2.
   * `-p optimise.baps`
+* specify an existing phylogenetic tree that we want to use for conditioning the statistical model. This is not essential, but it does ensure that the tree and the clusters are consistent with each other.
+  * `--phylogeny gubbins.final_tree.tre`
 ```
-run_fastbaps -i gubbins.filtered_polymorphic_sites.fasta -o fastbaps.clusters --levels 2 -p optimise.baps
+run_fastbaps -i gubbins.filtered_polymorphic_sites.fasta -o fastbaps.clusters --levels 2 -p optimise.baps --phylogeny gubbins.final_tree.tre
 ```
 
 We can view the output using `head` or `cat`
