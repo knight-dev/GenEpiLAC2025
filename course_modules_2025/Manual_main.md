@@ -15,4 +15,4 @@
 - Introduction to epidemiology and genomic collaborative surveillance 
 - [Module 6: Web tools for genomic epidemiology](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Web_tools_for_genomic_epidemiology/manual.md)
 - Group Task
-- [Appendices](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Genome_visualisation_tools/Appendix_Artemis_2024.pdf)
+- [Appendices](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Genome_visualisation_tools/Appendix_Artemis_2024.pdf)
