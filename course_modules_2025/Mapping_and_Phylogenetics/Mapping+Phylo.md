@@ -693,8 +693,8 @@ run_gubbins.py -c 4 -p gubbins clean2.full.aln
 Note: `gubbins` can take a long time to run on some computers. If `gubbins` takes more than 10 mins to complete, we have already run it for you - the files are available in the GitHub folder at `~/github_repository/Modules/Mapping_and_Phylo/gubbins_backup_2024.tar.gz`. 
 
 ```
-ls -lh ~/github_repository/Modules/Mapping_and_Phylo/
-cp ~/github_repository/Modules/Mapping_and_Phylo/gubbins_backup_2024.tar.gz .
+ls -lh ~/github_repository/course_data_2025/mapping_and_phylo/
+cp ~/github_repository/course_data_2025/mapping_and_phylo/gubbins_backup_2024.tar.gz .
 tar -zxf gubbins_backup_2024.tar.gz
 ```
 
