@@ -584,7 +584,7 @@ Examine the tree:
 <br>
 
 ## Adjusting a dataset to remove a poor quality genome
-The unpolished long-read assembly `CTMA_1441.long_nopolish` is filled with uncorrected errors. We therefore should not use it in our analysis. We should rerun `snippy-core` to build the alignment without it:
+The unpolished long-read assembly `CTMA_1441.long_nopolish` is filled with uncorrected errors. We therefore should not use it in our analysis. We will also remove the duplicate examples of CTPA_1441, so we are only using a single example. We can rerun `snippy-core` to rebuild the alignment without the unnecessary samples:
 ```
 snippy-core --ref references/Vibrio_cholerae_O1_biovar_eltor_str_N16961_v2.fa old.snippy.runs_2024/* new-sample-1 new-sample-2
 ```
