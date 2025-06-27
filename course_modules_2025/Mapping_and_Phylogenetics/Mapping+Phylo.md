@@ -803,7 +803,7 @@ In the command below, we:
   * `--levels 2`
 * specify a model for delineating genomes - we will use a relaxed clustering model which should maximise the number of clusters we get at level 2.
   * `-p optimise.baps`
-* specify an existing phylogenetic tree that we want to use for conditioning the statistical model. This is not essential, but it does ensure that the tree and the clusters are consistent with each other.
+* specify an existing phylogenetic tree that we want to use for conditioning the statistical model. This option is not essential, but it ensures that the tree and the clusters are consistent with one another.
   * `--phylogeny gubbins.final_tree.tre`
 ```
 run_fastbaps -i gubbins.filtered_polymorphic_sites.fasta -o fastbaps.clusters --levels 2 -p optimise.baps --phylogeny gubbins.final_tree.tre
