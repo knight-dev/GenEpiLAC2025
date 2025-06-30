@@ -584,7 +584,7 @@ Examine the tree:
 <br>
 
 ## Adjusting a dataset to remove a poor quality genome
-The unpolished long-read assembly `CTMA_1441.long_nopolish` is filled with uncorrected errors. We therefore should not use it in our analysis. We will also remove the duplicate examples of CTPA_1441, so we are only using a single example. We can rerun `snippy-core` to rebuild the alignment without the unnecessary samples:
+The unpolished long-read assembly `CTMA_1441.long_nopolish` is filled with uncorrected errors. We therefore should not use it in our analysis. We will also remove the duplicate examples of CTMA_1441, so we are only using a single example. We can rerun `snippy-core` to rebuild the alignment without the unnecessary samples:
 ```
 snippy-core --ref references/Vibrio_cholerae_O1_biovar_eltor_str_N16961_v2.fa old.snippy.runs_2024/* new-sample-1 new-sample-2
 ```
@@ -641,7 +641,7 @@ Microreact may not recognise the file, so let's tell micoreact this this is a tr
 
 Click `continue` to view the tree
 
-![microreact.4](microreact-my-first-tree__2024.png)
+![microreact.4](microreact-my-first-tree__2025.png)
 
 
 <br>
@@ -811,7 +811,7 @@ run_fastbaps -i gubbins.filtered_polymorphic_sites.fasta -o fastbaps.clusters --
 
 We can view the output using `head` or `cat`
 
-![fastbaps.command](run-fastbaps__2024.png)
+![fastbaps.command](run-fastbaps__2025.png)
 
 <br>
 
@@ -829,7 +829,7 @@ sed s/Isolates/ID/ fastbaps.clusters > fastbaps.clusters.fixid.csv
 head fastbaps.clusters.fixid.csv
 ```
 
-![fastbaps.fixid.code](fastbaps.fixid__2024.png)
+![fastbaps.fixid.code](fastbaps.fixid__2025.png)
 
 
 <br>
@@ -850,7 +850,7 @@ Click `Continue`
 
 You should now see a tree coloured by your fastbaps groups. You can use the toggles to change the colouring and to add metadata blocks.
 
-![microreact.fastbaps.final](microreact.fastbaps.finaltree__2024.png)
+![microreact.fastbaps.final](microreact.fastbaps.finaltree__2025.png)
 
 
 <br>
