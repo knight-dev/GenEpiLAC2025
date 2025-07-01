@@ -224,8 +224,8 @@ In the command below we:
 
 - Allocate 4 CPUs to the assembler
     - `--cpus 4`
-- Specify a maximum of 8 Gb memory to use
-    - `--ram 6`
+- Specify a maximum of 4 Gb memory to use
+    - `--ram 4`
 - Specify an approximate genome size of 2.8Mb
     - `--gsize 2.8M`
 - Specify the ONT long reads to use
@@ -235,7 +235,7 @@ In the command below we:
 
 
 ```
-dragonflye --cpus 4 --ram 6 --gsize 2.8M --reads S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s100.ds10000.fastq.gz --outdir S_aureus_JKD6159.s100.ds10000.dragonflye.long
+dragonflye --cpus 4 --ram 4 --gsize 2.8M --reads S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s100.ds10000.fastq.gz --outdir S_aureus_JKD6159.s100.ds10000.dragonflye.long
 ```
 
 ![dragonflye.long.running](Dragonflye-long.running.png)
@@ -269,8 +269,8 @@ In the command below we:
 
 - Allocate 4 CPUs to the assembler
     - `--cpus 4`
-- Specify a maximum of 6 Gb memory to use
-    - `--ram 6`
+- Specify a maximum of 4 Gb memory to use
+    - `--ram 4`
 - Specify an approximate genome size of 2.8Mb
     - `--gsize 2.8M`
 - Specify the ONT long reads to use
@@ -286,7 +286,7 @@ In the command below we:
 
 
 ```
-dragonflye --cpus 4 --ram 6 --gsize 2.8M --reads S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s100.ds10000.fastq.gz --R1 S_aureus_JKD6159_Illumina.s100.ds500000-reads_1.fastq.gz --R2 S_aureus_JKD6159_Illumina.s100.ds500000-reads_2.fastq.gz --outdir S_aureus_JKD6159.s100.ds10000.dragonflye.hybrid --pilon 1 --polypolish 1 
+dragonflye --cpus 4 --ram 4 --gsize 2.8M --reads S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s100.ds10000.fastq.gz --R1 S_aureus_JKD6159_Illumina.s100.ds500000-reads_1.fastq.gz --R2 S_aureus_JKD6159_Illumina.s100.ds500000-reads_2.fastq.gz --outdir S_aureus_JKD6159.s100.ds10000.dragonflye.hybrid --pilon 1 --polypolish 1 
 ```
 
 ![dragonflye.hybrid.running](Dragonflye-hybrid.running.png)
