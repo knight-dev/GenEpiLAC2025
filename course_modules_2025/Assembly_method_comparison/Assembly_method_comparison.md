@@ -83,7 +83,7 @@ You can examine the contents of this directory:
 ls -lh
 ```
 
-![ls_module_start](xx)
+![ls_module_start](Assembly_Comp_ls_module_start_2025.png)
 
 <br>
 
@@ -306,31 +306,15 @@ conda deactivate
 ## Backup for long reads
 In the event that the long read Dragonflye assemblies fail to work, we have prepared files ahead of time. 
 
-### Download preprepared assemblies
-
-Go to the github directory
-```
-cd ~/github_repository
-```
+### Copy preprepared assemblies
 
 ```
-git pull
-```
-
-<br>
-Your files should now be available
-
-```
-ls -l ~/github_repository/course_data/
+ls -l ~/github_repository/course_data_2025/assembly_data/
 ```
 
 <br>
 
-Now use `cd` go to the Module 5 Part 1 directory.
-
-<br>
-
-Use `cp` to copy the `.tar.gz` file from `~/github_repository/course_data/` to your current location.
+Use `cp` to copy the `.tar.gz` file from `~/github_repository/course_data_2025/assembly_data/` to your current location.
 
 <br>
 
@@ -364,7 +348,7 @@ First, move into the directory where your assembly output directory is (depends 
 
 e.g.  
 ```
-cd S_aureus_JKD6159.s100.dragonflye.hybrid
+cd S_aureus_JKD6159.s100.ds10000.dragonflye.hybrid
 
 ls -lh
 ```
