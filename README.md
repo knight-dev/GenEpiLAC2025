@@ -64,6 +64,7 @@ After attending the course, participants should be able to:
 - [Tomás Poklepovich](https://www.linkedin.com/in/tom%C3%A1s-javier-pokl%C3%A9povich-caride-6a622322/), National Center of Genomics & Bioinformatics - ANLIS-Malbran, Argentina
 - [César Rodríguez](https://scholar.google.com/citations?user=Mq0-MIsAAAAJ&hl=en), Universidad de Costa Rica, Costa Rica
 - [Marcela Suárez-Esquivel](https://www.researchgate.net/profile/Marcela-Suarez-Esquivel), Universidad Nacional, Costa Rica
+- [Nazaret Ruiz-Villalobos](https://www.researchgate.net/profile/Nazaret-Ruiz-Villalobos), PIET, Veterinary School, Universidad Nacional, Costa Rica
 
 **Wellcome Connecting Science Team**
 
