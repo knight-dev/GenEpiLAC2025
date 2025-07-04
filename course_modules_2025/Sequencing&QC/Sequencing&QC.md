@@ -351,6 +351,7 @@ Before we continue working with our data, we want to check that there are no con
 
 ```
 mkdir kraken2
+conda activate kraken2
 kraken2 -db /home/manager/kraken2_database --threads 4 --gzip-compressed --paired --report kraken2/CNGB1553_kraken2.txt --use-names CNGB1553_S31_L001_R1_001.fastq.gz CNGB1553_S31_L001_R2_001.fastq.gz
 ```
 -db = name for Kraken2 database
@@ -366,6 +367,12 @@ kraken2 -db /home/manager/kraken2_database --threads 4 --gzip-compressed --paire
 --use-names = print scientific names instead of just taxids
 
 Repeat the previous command for samples CNGB1797 and CNGB39120.
+
+When you finish running kraken2, please type:
+
+```
+conda deactivate
+```
 
 **What is the most abundant species identified in each sample?**
 
@@ -426,7 +433,9 @@ firefox nanoplot/CTMA_1441_longds/CTMA_1441_longds_NanoPlot-report.html &
 Before continuing, we will check there are no contaminations in this dataset:
 
 ```
+conda activate kraken2
 kraken2 -db /home/manager/kraken2_database --threads 4 --gzip-compressed --report kraken2/CTMA_1441_kraken2.txt --use-names CTMA_1441_longds.fastq.gz
+conda deactivate
 ```
 
 **What is the most abundant species identified in this sample?**
