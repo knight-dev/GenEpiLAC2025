@@ -54,7 +54,7 @@ After attending the course, participants should be able to:
 - [Caterina Guzmán-Verri](https://scholar.google.com/citations?user=S1GNAC8AAAAJ&hl=en), PIET, Veterinary School, Universidad Nacional, Costa Rica
 - [Josefina Campos](https://www.researchgate.net/profile/Josefina-Campos-2), World Health Organisation, Switzerland
 - [Matt Holden](https://risweb.st-andrews.ac.uk/portal/en/persons/matthew-holden(029e1abe-7829-4bc3-accf-9d9e392f274c).html), University of St Andrews, Scotland
-- [Mathew Beale](https://www.sanger.ac.uk/person/beale-mathew/), Wellcome Sanger Institute, UK
+- [Mat Beale](https://www.sanger.ac.uk/person/beale-mathew/), Wellcome Sanger Institute, UK
 - [Julio Diaz Caballero](https://www.eit.org/people/julio-diaz-caballero), Ellison Institute of Technology, UK
 - [Matthew Dorman](https://scholar.google.com/citations?user=P_E7LXAAAAAJ&hl=en), Trinity College Dublin, Ireland
 - [Jordan Ashworth](https://scholar.google.co.uk/citations?user=xIJEY2UAAAAJ&hl=en), Public Health Scotland, UK
