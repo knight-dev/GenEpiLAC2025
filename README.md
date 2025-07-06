@@ -55,8 +55,8 @@ After attending the course, participants should be able to:
 - [Josefina Campos](https://www.researchgate.net/profile/Josefina-Campos-2), World Health Organisation, Switzerland
 - [Matt Holden](https://risweb.st-andrews.ac.uk/portal/en/persons/matthew-holden(029e1abe-7829-4bc3-accf-9d9e392f274c).html), University of St Andrews, Scotland
 - [Mathew Beale](https://www.sanger.ac.uk/person/beale-mathew/), Wellcome Sanger Institute, UK
-- [Julio Caballero](https://www.pathogensurveillance.net/team/dr-julio-diaz-caballero/), Centre for Genomic Pathogen Surveillance, University of Oxford, UK
-- [Matthew Dorman](https://scholar.google.com/citations?user=P_E7LXAAAAAJ&hl=en), University of Galway, Ireland
+- [Julio Diaz Caballero](https://www.eit.org/people/julio-diaz-caballero), Ellison Institute of Technology, UK
+- [Matthew Dorman](https://scholar.google.com/citations?user=P_E7LXAAAAAJ&hl=en), Trinity College Dublin, Ireland
 - [Jordan Ashworth](https://scholar.google.co.uk/citations?user=xIJEY2UAAAAJ&hl=en), Public Health Scotland, UK
 - [Francisco Duarte-Martinez](https://www.inciensa.sa.cr/investigacion/investigadores/Francisco%20Duarte.aspx#HERMES_TABS_1_0), INCIENSA, Costa Rica
 - [Jose Arturo Molina Mora](https://ciet.ucr.ac.cr/en/researchers/jose-arturo-molina-mora-phd), Universidad de Costa Rica, Costa Rica
