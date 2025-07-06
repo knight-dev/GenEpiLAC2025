@@ -4,7 +4,7 @@
 
 ### 6–11 July 2025, San José, Costa Rica
 
-[Wellcome Connecting Science Course Run Website Link](https://coursesandconferences.wellcomeconnectingscience.org/event/genomics-and-epidemiological-surveillance-of-bacterial-pathogens-20250706/) <br /> 
+[Wellcome Connecting Science Course Website](https://coursesandconferences.wellcomeconnectingscience.org/event/genomics-and-epidemiological-surveillance-of-bacterial-pathogens-20250706/) <br /> 
 [Course Time Table 2025](https://github.com/WCSCourses/GenEpiLAC2025/raw/main/course_data_2025/Genomic%20surveillance%202025%20%20-%20Timetable%202025.pdf) <br /> 
 [Course Manual](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Manual_main.md)
 
