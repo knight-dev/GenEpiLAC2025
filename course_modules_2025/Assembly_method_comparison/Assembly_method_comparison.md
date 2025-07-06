@@ -442,10 +442,10 @@ When all results are uploaded, we will (hopefully) put summary plots [here](http
 
 <br>
 
-[ Proceed to Part 2: Assembly and Annotation >>>](https://github.com/WCSCourses/GenEpiLAC2024/blob/main/Manuals/Genome_Assembly_Annotation/Genome_Assembly_Annotation.md)
+[ Proceed to Part 2: Assembly and Annotation >>>](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Genome_Assembly_Annotation/Genome_Assembly_Annotation.md)
 
-[comment]: <> (The above link needs to be updated)
 
+<br>
 
 <br>
 
