@@ -57,7 +57,7 @@ After attending the course, participants should be able to:
 - [Mathew Beale](https://www.sanger.ac.uk/person/beale-mathew/), Wellcome Sanger Institute, UK
 - [Julio Caballero](https://www.pathogensurveillance.net/team/dr-julio-diaz-caballero/), Centre for Genomic Pathogen Surveillance, University of Oxford, UK
 - [Matthew Dorman](https://www.universityofgalway.ie/our-research/people/mathematical-statistical-sciences/matthewdorman/), University of Galway, Ireland
-- [Jordan Ashworth](), Public Health Scotland, UK
+- [Jordan Ashworth](https://scholar.google.co.uk/citations?user=xIJEY2UAAAAJ&hl=en), Public Health Scotland, UK
 - [Francisco Duarte-Martinez](https://www.inciensa.sa.cr/investigacion/investigadores/Francisco%20Duarte.aspx#HERMES_TABS_1_0), INCIENSA, Costa Rica
 - [Jose Arturo Molina Mora](https://ciet.ucr.ac.cr/en/researchers/jose-arturo-molina-mora-phd), Universidad de Costa Rica, Costa Rica
 - [María Sol Haim](https://www.researchgate.net/profile/Maria-Sol-Haim), National Center of Genomics & Bioinformatics - ANLIS-Malbran, Argentina
