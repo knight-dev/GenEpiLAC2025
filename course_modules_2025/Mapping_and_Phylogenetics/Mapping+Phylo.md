@@ -325,10 +325,13 @@ head new-sample-1/snps.consensus.fa
 
 <br>
 
+<br>
+
+
 ## Map a second genome to reference 
 We now need to map the second genome (`new-sample-2`) to our reference
 
-Use the code examples provided above to run `snippy` on the second set of `fastq` files
+Adapt the code examples provided above to run `snippy` on the second set of `fastq` files
 
 Examine the results of snippy for `new-sample-2` using `grep`, `ls` and `less`
 
@@ -400,7 +403,7 @@ Examine the results of snippy for each assembly using `grep`, `ls` and `less`.
 <br>
 
 
-What do you notice about the number of variable sites identified with the different  assemblies?
+What do you notice about the number of variable sites (reported at the end of the snippy run) identified with the different assemblies?
 
 <br>
 
@@ -496,10 +499,9 @@ First, remove all the invariant sites and create a SNP-only multiple sequence al
 ```
 snp-sites -o clean.full.SNPs.aln clean.full.aln
 ```
-We can see how many invariant sites were removed (and what proportion of A, T, G, C they were) using
-```
-snp-sites -C clean.full.aln
-```
+We can also use snp-sites to find out how many invariant sites were removed (and what proportion of A, T, G, C they were). Use `snp-sites -C` to do this for the file above.
+
+
 ![snp-sites.2](snp-sites_run__2024.png)
 
 <br>
@@ -596,17 +598,12 @@ snippy-clean_full_aln core.full.aln > clean2.full.aln
 <br>
 
 And now build a new phylogeny:
-```
-snp-sites -o clean2.full.SNPs.aln clean2.full.aln
-```
 
-```
-iqtree -s clean2.full.SNPs.aln -fconst $( snp-sites -C clean2.full.aln ) -m GTR+F+I -T 2 -mem 2G -B 1000 -o M66
-```
+- Run `snp-sites` to create a file called `clean2.full.SNPs.aln`
 
-```
-cp clean2.full.SNPs.aln.treefile clean2.full.SNPs.aln.tre
-```
+- Run `iqtree` to calculate a phylogeny for `clean2.full.SNPs.aln`
+
+- Rename the final treefile to `clean2.full.SNPs.aln.tre`
 
 <br>
 
@@ -694,7 +691,13 @@ Note: `gubbins` can take a long time to run on some computers. If `gubbins` take
 
 ```
 ls -lh ~/github_repository/course_data_2025/mapping_and_phylo/
+```
+
+```
 cp ~/github_repository/course_data_2025/mapping_and_phylo/gubbins_backup_2024.tar.gz .
+```
+
+```
 tar -zxf gubbins_backup_2024.tar.gz
 ```
 
