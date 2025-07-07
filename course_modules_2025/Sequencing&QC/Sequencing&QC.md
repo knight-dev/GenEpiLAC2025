@@ -456,22 +456,17 @@ Adapt the previous code to run NanoPlot on the newly created long-read filtered 
 
 #### What if you had a large number of FastQC and kraken2 reports to analyse?
 
-[**MultiQC**](https://multiqc.info/) is a tool that summarises different types of NGS reports. It is really interesting for visualising many FastQC reports at once.
+[**MultiQC**](https://multiqc.info/) is a tool that summarises different types of NGS reports. It is really interesting for visualising many FastQC and kraken2 reports at once.
 
-First, install the tool:
+Being inside Module_1_Sequencing_QC folder, run the following command:
 
-    pip install multiqc
-    pip install polars-lts-cpu
-
-Navigate to the directory "fastqc_raw" and run:
-
-    multiqc .
+    multiqc fastq_raw kraken2
 
 See summarized report in a browser:
 
     firefox multiqc_report.html &
 
-[**Pavian**](https://github.com/fbreitwieser/pavian) is an interactive browser application for analysing and visualisation of results from classifiers such as Kraken 2.
+[**Pavian**](https://github.com/fbreitwieser/pavian) is another interactive browser application for analysing and visualisation of results from classifiers such as Kraken2.
 
 First, navigate to [https://fbreitwieser.shinyapps.io/pavian/](https://fbreitwieser.shinyapps.io/pavian/).
 
