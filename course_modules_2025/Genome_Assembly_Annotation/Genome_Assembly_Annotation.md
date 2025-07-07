@@ -377,7 +377,7 @@ To help you understand what what genes ResFinder is using for different antibiot
 <br>
 
 **How do the resistomes predicted for each isolate compare with the phenotypic data?**
-You can find the resistance phenotypes here: [Resistance phenotype of 16B, MW2 and MSSA476](#resistance-phenotype-of-16b-mw2-and-mssa476)
+You can find the resistance phenotypes here: [Resistance phenotype of 16B, MW2 and MSSA476](#the-research-questions)
 <input type="text" placeholder="Answer" style="width:100%; height: 30px;">
 
 <br>
