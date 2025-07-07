@@ -1,14 +1,13 @@
-name: dragonflye_env3
+name: dragonflye_env
 channels:
   - conda-forge
   - bioconda
-  - defaults
 dependencies:
-  - python=3.9
-  - medaka=1.4.3
+  - python=3.10
   - dragonflye
+  - medaka=1.7.3
   - h5py
   - pip
   - pip:
-      - tensorflow==2.3.0
+      - tensorflow==2.4.0  # last TF version with some reduced AVX demands, might work
 
