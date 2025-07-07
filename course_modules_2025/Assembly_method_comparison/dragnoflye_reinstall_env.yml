@@ -1,0 +1,14 @@
+name: dragonflye_env3
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.9
+  - medaka=1.4.3
+  - dragonflye
+  - h5py
+  - pip
+  - pip:
+      - tensorflow==2.3.0
+
