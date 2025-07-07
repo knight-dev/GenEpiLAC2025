@@ -136,12 +136,21 @@ In the command below we:
 - Specify a directory to output files to
     - `-o <dir>`
 
+<br>
+
+An assembly has already been made using `S_aureus_JKD6159_Illumina.s100.ds500000-reads` :
 
 ```
 unicycler -t 4 -1 S_aureus_JKD6159_Illumina.s100.ds500000-reads_1.fastq.gz -2 S_aureus_JKD6159_Illumina.s100.ds500000-reads_2.fastq.gz -o S_aureus_JKD6159.s100.unicycler.short
 ```
 
 ![unicycler.short.running](Unicycler-short.running.png)
+
+<br>
+
+Try running this for either:
+ - `S_aureus_JKD6159_Illumina.s200.ds500000-reads_<1/2>.fastq.gz` or 
+ - `S_aureus_JKD6159_Illumina.s300.ds500000-reads_<1/2>.fastq.gz`.
 
 <br>
 
@@ -159,12 +168,24 @@ In the command below we:
 - Specify a directory to output files to
     - `-o <dir>`
 
+<br>
+
+An assembly has already been made using `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s100.ds10000.fastq.gz` :
 ```
 unicycler -t 4 -l S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s100.ds10000.fastq.gz -o S_aureus_JKD6159.s100.unicycler.long
 ```
 
 ![unicycler.long.running](Unicycler-long.running.png)
 
+<br>
+
+Try running the assembly using either:
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s200.ds10000.fastq.gz` or 
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s300.ds10000.fastq.gz` or
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s200.ds5000.fastq.gz` or
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s300.ds5000.fastq.gz` or
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s200.ds2500.fastq.gz` or
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s300.ds2500.fastq.gz` or
 
 <br>
 
@@ -186,13 +207,25 @@ In the command below we:
 - Specify a directory to output files to
     - `-o <dir>`
 
-Note, this method may take over an hour to run on the VMs - check with an instructor before running.
 
+A hybrid assembly has already been been made using `S_aureus_JKD6159_Illumina.s100.ds500000-reads_<1/2>`, and `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s100.ds10000.fastq.gz`:
 ```
 unicycler -t 4 -1 S_aureus_JKD6159_Illumina.s100.ds500000-reads_1.fastq.gz -2 S_aureus_JKD6159_Illumina.s100.ds500000-reads_2.fastq.gz -l S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s100.ds10000.fastq.gz -o S_aureus_JKD6159.s100.unicycler.hybrid
 ```
 
 ![unicycler.hybrid.running](Unicycler-hybrid.running.png)
+
+<br>
+
+Try running your own assembly using:
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s200.ds10000.fastq.gz` and `S_aureus_JKD6159_Illumina.s200.ds500000-reads_<1/2>` or
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s300.ds10000.fastq.gz` and `S_aureus_JKD6159_Illumina.s300.ds500000-reads_<1/2>` or
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s200.ds5000.fastq.gz` and `S_aureus_JKD6159_Illumina.s200.ds500000-reads_<1/2>` or
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s300.ds5000.fastq.gz` and `S_aureus_JKD6159_Illumina.s300.ds500000-reads_<1/2>` or
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s200.ds2500.fastq.gz` and `S_aureus_JKD6159_Illumina.s200.ds500000-reads_<1/2>` or
+  - `S_aureus_JKD6159_ONT_R10.4_guppy_v6.1.7__filt.s300.ds2500.fastq.gz` and `S_aureus_JKD6159_Illumina.s300.ds500000-reads_<1/2>` or
+
+Your instructor will tell you which one you should run.
 
 <br>
 <br>
@@ -208,7 +241,12 @@ unicycler -t 4 -1 S_aureus_JKD6159_Illumina.s100.ds500000-reads_1.fastq.gz -2 S_
 
 <br>
 
-To get `dragonflye` running in the virtual machine, it has been installed using a tool called `mamba` (similar to `conda`). We need to 'activate' `mamba` to make `dragonflye` available:
+Dragonflye is a very useful tool for running long read assembly, and is generally very easy to install - to get `dragonflye` running in the virtual machine, it has been installed using a tool called `mamba` (similar to `conda`). 
+
+Unfortunately, this year we have encountered a rare software version issue conflict between the Virtual Machine and dragonflye. We will therefore not be able to run dragonflye as part of this exercise. However, the commands to run this are below:
+
+
+We need to 'activate' `mamba` to make `dragonflye` available:
 
 ```
 conda activate dragonflye-env
@@ -216,7 +254,7 @@ conda activate dragonflye-env
 
 <br>
 
-Now we can run `dragonflye`. 
+Next we run `dragonflye`. 
 
 <br>
 
@@ -304,7 +342,7 @@ conda deactivate
 <br>
 
 ## Backup for long reads
-In the event that the long read Dragonflye assemblies fail to work, we have prepared files ahead of time. 
+Since Dragonflye is not running on the VM this year, we will use files generated from last year's course instead. 
 
 ### Copy preprepared assemblies
 
