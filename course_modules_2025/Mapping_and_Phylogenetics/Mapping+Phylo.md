@@ -559,15 +559,23 @@ But this is not very helpful - it's just raw text in 'newick' format.
 
 Instead, we can visualise this using `figtree`
 ```
-figtree clean.full.SNPs.aln.tre &
+figtree &
 ```
 (Note: Remember to include the `&` symbol at the end - this allows figtree to run in the background, and allows you to still use the command prompt)
 
 <br>
 
+Ignore the java error messages. The popup box is asking you how to describe the 'bootstrap values'. You can click 'OK' here.
+
+<br>
+
+Use the `File -> Open` menu and navigate to the `Module_4_Mapping_Phylogeny` and open the file `clean.full.SNPs.aln.tre`.
+
+<br>
+
 ![figtree.1](figtree_launch__2024.png)
 
-Ignore the java error messages. The popup box is asking you how to describe the 'bootstrap values'. You can click 'OK' here.
+
 
 You should now have a visualisation of the tree we just generated
 
