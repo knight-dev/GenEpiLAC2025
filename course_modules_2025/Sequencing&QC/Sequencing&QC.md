@@ -302,9 +302,12 @@ gzip CNGB1553_*.fastq
 
 Going back to FastQC, we can launch the graphical interface by simply executing ``fastqc`` on the command line. However, it is often more convenient to use the software in the command-line mode. Execute the following commands in the Terminal:
 
-    mkdir fastqc_raw
-    fastqc -o fastqc_raw *.fastq.gz
-    
+1. `mkdir fastqc_raw`
+
+
+2. `fastqc -o fastqc_raw *.fastq.gz`
+
+
 > First run the `mkdir` command and afterwards `fastqc`.
 
 > With this command we will be running FastQC in all the files that have the `.fastq.gz` extension and the output files will appear in the folder "fastqc_raw".
