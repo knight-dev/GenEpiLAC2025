@@ -134,15 +134,15 @@ The Navigator panel is fairly intuitive so open it up and give it a try.
 
 3- Use `Goto Feature With This Qualifier value` to search the contents of all qualifiers for a particular term. For example, using the word "pseudogene" will take you to the next feature with the word "pseudogene" in any of its qualifiers. Note how repeated clicking of the `Goto` button takes you to the following pseudogene in the order that they occur on the chromosome.
 
-4- Look at [Appendix VI](https://github.com/WCSCourses/GenEpiLAC2023/blob/main/Manuals/Genome_visualisation_tools/Appendix_Artemis_2024.pdf) which is a functional classification scheme used for the annotation of S. Typhi. Each CDS has a class qualifier best describing its function. Use the `Goto Feature With This Qualifier value` search to look for CDSs belonging to a class of interest by searching with the appropriate class values.
+4- Look at [Appendix VI](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Genome_visualisation_tools/Appendix_Artemis_2024.pdf) which is a functional classification scheme used for the annotation of S. Typhi. Each CDS has a class qualifier best describing its function. Use the `Goto Feature With This Qualifier value` search to look for CDSs belonging to a class of interest by searching with the appropriate class values.
 
 5- tRNA genes. Type "tRNA" in the `Goto Feature With This Key`.
 
-6- Regulator-binding DNA consensus sequence (real or made up!). Note that degenerate base values can be used [Appendix VIII](https://github.com/WCSCourses/GenEpiLAC2023/blob/main/Manuals/Genome_visualisation_tools/Appendix_Artemis_2024.pdf).
+6- Regulator-binding DNA consensus sequence (real or made up!). Note that degenerate base values can be used [Appendix VIII](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Genome_visualisation_tools/Appendix_Artemis_2024.pdf).
 
 7- Amino acid consensus sequences (real or made up!). You can use "x"s. Note that it searches all six reading frames regardless of whether the amino acids are encoded or not.
 
-**What are Keys and Qualifiers?** See [Appendix IV](https://github.com/WCSCourses/GenEpiLAC2023/blob/main/Manuals/Genome_visualisation_tools/Appendix_Artemis_2024.pdf)
+**What are Keys and Qualifiers?** See [Appendix IV](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Genome_visualisation_tools/Appendix_Artemis_2024.pdf)
 
 Clearly there are many more features of Artemis which we will not have time to explain in detail. Before getting on with this next section it might be worth browsing the menus. Hopefully you will find most of them easy to understand.
 
@@ -310,7 +310,7 @@ Now open the EMBL format file that you have just created in Artemis.
 You will see that the colours of the features have now changed. This is because not all the qualifiers in the previous entry are accepted by the EMBL database, so some have not been saved in this format. This includes the "/colour" qualifier, so Artemis displays the features with default colours.
 
 When you download sequence files from EMBL and visualize them in Artemis you will notice that they are displayed using default colours. You can customize your own
-annotation files with the "/colour" qualifier and chosen number [Appendix VII](https://github.com/WCSCourses/GenEpiLAC2023/blob/main/Manuals/Genome_visualisation_tools/Appendix_Artemis_2024.pdf), to differentiate features. To do this you can use the Feature Selector to select certain features and annotate them all using the "Edit", "Change Qualifiers of Selected" function.
+annotation files with the "/colour" qualifier and chosen number [Appendix VII](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Genome_visualisation_tools/Appendix_Artemis_2024.pdf), to differentiate features. To do this you can use the Feature Selector to select certain features and annotate them all using the "Edit", "Change Qualifiers of Selected" function.
 
 
 <br>
