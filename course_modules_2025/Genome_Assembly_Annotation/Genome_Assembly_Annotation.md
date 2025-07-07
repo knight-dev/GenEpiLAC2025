@@ -587,7 +587,7 @@ At the top of the page, there is a link to view the genome in the **Icarus Conti
 
 <br>
 
-**How does this compare to the size of a typical S aureus genome (appriximately 2.8Mb). What percentage of the genome is likely covered?**
+**How does this compare to the size of a typical *S aureus* genome (approximately 2.8Mb). What percentage of the genome is likely covered?**
 <input type="text" placeholder="Answer" style="width:100%; height: 30px;">
 
 <br>
