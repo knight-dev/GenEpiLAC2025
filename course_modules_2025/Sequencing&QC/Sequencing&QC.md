@@ -247,10 +247,9 @@ For this module, we will be working with files which are inside the folder "Modu
 Inside the directory "Module_1_Sequencing_QC", we have 7 compressed fastq files as fastq.gz. You can check that the files are there. Do you remember how to do that?
 
 We will start working with files:
-```
-CNGB1553_S31_L001_R1_001.fastq.gz
-CNGB1553_S31_L001_R2_001.fastq.gz
-```
+ - `CNGB1553_S31_L001_R1_001.fastq.gz`
+ - `CNGB1553_S31_L001_R2_001.fastq.gz`
+
 
 As we saw in the introduction, this is the format we will get from an Illumina paired-end run. To have a better look at their structure, we will uncompress them:
 ```
@@ -358,7 +357,13 @@ Execute the following command to run kraken2 on sample CNGB1553:
 
 ```
 mkdir kraken2
+```
+
+```
 conda activate kraken2
+```
+
+```
 kraken2 -db /home/manager/kraken2_database --threads 2 --gzip-compressed --paired --report kraken2/CNGB1553_kraken2.txt --use-names CNGB1553_S31_L001_R1_001.fastq.gz CNGB1553_S31_L001_R2_001.fastq.gz
 ```
 -db = name for Kraken2 database
@@ -389,6 +394,9 @@ Now, we are going to look at how we can remove poor data and adapter contaminati
 
 ```
 mkdir trimmed
+```
+
+```
 trim_galore -q 25 --length 50 --paired --illumina --fastqc -o trimmed CNGB1553_S31_L001_R1_001.fastq.gz CNGB1553_S31_L001_R2_001.fastq.gz
 ```
 
@@ -441,7 +449,13 @@ Before continuing, we will check there are no contaminations in this dataset:
 
 ```
 conda activate kraken2
+```
+
+```
 kraken2 -db /home/manager/kraken2_database --threads 4 --gzip-compressed --report kraken2/CTMA_1441_kraken2.txt --use-names CTMA_1441_longds.fastq.gz
+```
+
+```
 conda deactivate
 ```
 
