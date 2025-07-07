@@ -4,7 +4,7 @@
 
 ### 6–11 July 2025, San José, Costa Rica
 
-[Wellcome Connecting Science Course Run Website Link]() <br /> 
+[Wellcome Connecting Science Course Website](https://coursesandconferences.wellcomeconnectingscience.org/event/genomics-and-epidemiological-surveillance-of-bacterial-pathogens-20250706/) <br /> 
 [Course Time Table 2025](https://github.com/WCSCourses/GenEpiLAC2025/raw/main/course_data_2025/Genomic%20surveillance%202025%20%20-%20Timetable%202025.pdf) <br /> 
 [Course Manual](https://github.com/WCSCourses/GenEpiLAC2025/blob/main/course_modules_2025/Manual_main.md)
 
@@ -54,10 +54,10 @@ After attending the course, participants should be able to:
 - [Caterina Guzmán-Verri](https://scholar.google.com/citations?user=S1GNAC8AAAAJ&hl=en), PIET, Veterinary School, Universidad Nacional, Costa Rica
 - [Josefina Campos](https://www.researchgate.net/profile/Josefina-Campos-2), World Health Organisation, Switzerland
 - [Matt Holden](https://risweb.st-andrews.ac.uk/portal/en/persons/matthew-holden(029e1abe-7829-4bc3-accf-9d9e392f274c).html), University of St Andrews, Scotland
-- [Mathew Beale](https://www.sanger.ac.uk/person/beale-mathew/), Wellcome Sanger Institute, UK
-- [Julio Caballero](https://www.pathogensurveillance.net/team/dr-julio-diaz-caballero/), Centre for Genomic Pathogen Surveillance, University of Oxford, UK
-- [Matthew Dorman](https://www.universityofgalway.ie/our-research/people/mathematical-statistical-sciences/matthewdorman/), University of Galway, Ireland
-- [Jordan Ashworth](), Public Health Scotland, UK
+- [Mat Beale](https://www.sanger.ac.uk/person/beale-mathew/), Wellcome Sanger Institute, UK
+- [Julio Diaz Caballero](https://www.eit.org/people/julio-diaz-caballero), Ellison Institute of Technology, UK
+- [Matthew Dorman](https://scholar.google.com/citations?user=P_E7LXAAAAAJ&hl=en), Trinity College Dublin, Ireland
+- [Jordan Ashworth](https://scholar.google.co.uk/citations?user=xIJEY2UAAAAJ&hl=en), Public Health Scotland, UK
 - [Francisco Duarte-Martinez](https://www.inciensa.sa.cr/investigacion/investigadores/Francisco%20Duarte.aspx#HERMES_TABS_1_0), INCIENSA, Costa Rica
 - [Jose Arturo Molina Mora](https://ciet.ucr.ac.cr/en/researchers/jose-arturo-molina-mora-phd), Universidad de Costa Rica, Costa Rica
 - [María Sol Haim](https://www.researchgate.net/profile/Maria-Sol-Haim), National Center of Genomics & Bioinformatics - ANLIS-Malbran, Argentina

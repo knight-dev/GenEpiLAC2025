@@ -377,7 +377,7 @@ To help you understand what what genes ResFinder is using for different antibiot
 <br>
 
 **How do the resistomes predicted for each isolate compare with the phenotypic data?**
-You can find the resistance phenotypes here: [Resistance phenotype of 16B, MW2 and MSSA476](#resistance-phenotype-of-16b-mw2-and-mssa476)
+You can find the resistance phenotypes here: [Resistance phenotype of 16B, MW2 and MSSA476](#the-research-questions)
 <input type="text" placeholder="Answer" style="width:100%; height: 30px;">
 
 <br>
@@ -526,7 +526,7 @@ An interactive report will be produced `report.html` in the `quast.output` direc
 <br>
 
 ```bash
-firefox quast.ouput/report.html &
+firefox quast.output/report.html &
 ```
 
 <br>
@@ -587,7 +587,7 @@ At the top of the page, there is a link to view the genome in the **Icarus Conti
 
 <br>
 
-**How does this compare to the size of a typical S aureus genome (appriximately 2.8Mb). What percentage of the genome is likely covered?**
+**How does this compare to the size of a typical *S. aureus* genome (approximately 2.8Mb). What percentage of the genome is likely covered?**
 <input type="text" placeholder="Answer" style="width:100%; height: 30px;">
 
 <br>
