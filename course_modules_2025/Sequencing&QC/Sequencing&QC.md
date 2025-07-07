@@ -347,12 +347,16 @@ Try to answer the following questions analysing FastQC results for samples CNGB1
 
 **With respect to quality scores, is the quality of read 1 exactly the same as that of read 2? Do you see the same in all the samples?**
 
-Before we continue working with our data, we want to check that there are no contaminations with other organisms. Although you may have a clue after analysing the "Per sequence GC content" graphs, we will double check by using [kraken2](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown). Execute the following command to run kraken2 on sample CNGB1553:
+Before we continue working with our data, we want to check that there are no contaminations with other organisms. Although you may have a clue after analysing the "Per sequence GC content" graphs, we will double check by using [kraken2](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown). 
+
+> **Note**: Before running kraken2 be sure to close firefox as it may not work if you have firefox open. Additionally, try to leave kraken2 working without doing anything else in the VM. It might take a while.
+
+Execute the following command to run kraken2 on sample CNGB1553:
 
 ```
 mkdir kraken2
 conda activate kraken2
-kraken2 -db /home/manager/kraken2_database --threads 4 --gzip-compressed --paired --report kraken2/CNGB1553_kraken2.txt --use-names CNGB1553_S31_L001_R1_001.fastq.gz CNGB1553_S31_L001_R2_001.fastq.gz
+kraken2 -db /home/manager/kraken2_database --threads 2 --gzip-compressed --paired --report kraken2/CNGB1553_kraken2.txt --use-names CNGB1553_S31_L001_R1_001.fastq.gz CNGB1553_S31_L001_R2_001.fastq.gz
 ```
 -db = name for Kraken2 database
 
