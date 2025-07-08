@@ -207,7 +207,7 @@ The folder contains:
   - `new-sample-1_1.fastq.gz`, `new-sample-1_2.fastq.gz`
   - `new-sample-2_1.fastq.gz`, `new-sample-2_2.fastq.gz`
 - a folder containing indexed reference genomes
-- an archive file containing previous `snippy` runs (`snippy.runs.1.tar.gz`)
+
 
 <br>
 
